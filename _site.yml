@@ -1,12 +1,11 @@
 title: "DTSE1008"
-date: "2021"
-description: |
-  Clases Métodos de Investigacion Cuantitativos (DTSE1008) Universidad Mayor
-author:
-  - first_name: "Andres"
-    last_name: "Gonzalez"
-    url: https://github.com/AGSCL
-    affiliation: CISS Umayor
-    orcid_id: 0000-0002-5166-9121
+creative_commons: CC BY
+base_url: https://clases-dtse100821.netlify.app/
+repository_url: https://github.com/AGSCL/Clases_DTSE1008
+theme: stylo.css 
+navbar:
+  left:
+    - text: "Ejercicios"
+      href: guias.html
+exclude: ["*.txt", "*.docx"]
 output_dir: "_site"
-#output: distill::distill_article

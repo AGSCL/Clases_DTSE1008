@@ -36,7 +36,7 @@
   --code-font-is-google: 1;
   --base-font-size: 20px;
   --text-font-size: 1rem;
-  --code-font-size: 50%;
+  --code-font-size: 100%;
   --code-inline-font-size: 1em;
   --header-h1-font-size: 2.75rem;
   --header-h2-font-size: 2.25rem;
@@ -256,12 +256,6 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 
 
 /* Extra CSS */
-.remark-slide-scaler {
-  overflow-y: auto;
-}
-pre {
-  line-height: 0.2em;
-}
 .red {
   color: #A4222B;
 }
@@ -351,26 +345,6 @@ pre {
 .text_100 {
   font-size: 100%;
 }
-.code_10 {
-  code-inline-font-size: 10%;
-  overflow-y: scroll !important;
-  overflow-x: scroll !important;
-  max-height: 5vh !important;
-  line-height: 0.75em;
-}
-.code_10_pre {
-  code-inline-font-size: 10%;
-  overflow-y: scroll !important;
-  overflow-x: scroll !important;
-  max-height: 15vh !important;
-  line-height: 0.2em;
-}
-.code_15 {
-  code-inline-font-size: 15%;
-  overflow-y: scroll !important;
-  overflow-x: scroll !important;
-  max-height: 10vh !important;
-}
 .text_90 {
   font-size: 90%;
 }
@@ -441,6 +415,12 @@ pre {
 slides > slide {
   overflow-x: auto !important;
   overflow-y: auto !important;
+}
+pre {
+  white-space: pre !important;
+  overflow-y: scroll !important;
+  max-height: 10vh !important;
+  font-size: 0.8em;
 }
 .superbigimage {
   white-space: nowrap;
