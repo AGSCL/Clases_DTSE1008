@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>DTSE1008: Clase 3. Conteo, Naturaleza y Tipos de Variables, Niveles de Medición</title>
+
+
+
+  <meta name="article:author" content="Andrés González"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="DTSE1008: Clase 3. Conteo, Naturaleza y Tipos de Variables, Niveles de Medición"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="DTSE1008"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="DTSE1008: Clase 3. Conteo, Naturaleza y Tipos de Variables, Niveles de Medición"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","subtitle","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Clase 3. Conteo, Naturaleza y Tipos de Variables, Niveles de Medición"]},{"type":"character","attributes":{},"value":["Métodos Cuantitativos de Investigación"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Andrés González"]}]}]},{"type":"NULL"},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["xaringan::moon_reader"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["includes","transition","lib_dir","css","self_contained","seal","nature"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["after_body"]}},"value":[{"type":"character","attributes":{},"value":["libs/collapseoutput.js"]}]},{"type":"character","attributes":{},"value":["slide"]},{"type":"character","attributes":{},"value":["libs"]},{"type":"character","attributes":{},"value":["xaringan-themer.css","animate.min.css","ninjutsu"]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["countdown","highlightStyle","highlightLines","slideNumberFormat","countIncrementalSlides","ratio","navigation"]}},"value":[{"type":"integer","attributes":{},"value":[300000]},{"type":"character","attributes":{},"value":["github"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["%current%"]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["16:9"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["scroll"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+  <script src="site_libs/pymjs-1.3.2/pym.v1.js"></script>
+  <script src="site_libs/widgetframe-binding-0.3.1/widgetframe.js"></script>
+  <script src="site_libs/plotly-binding-4.9.4.1/plotly.js"></script>
+  <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+  <link href="site_libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+  <script src="site_libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+  <link href="site_libs/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" />
+  <script src="site_libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+  <script src="site_libs/jquery-ui-1.11.4/jquery.ui.touch-punch.min.js"></script>
+  <link href="site_libs/c3-0.4.11/c3.min.css" rel="stylesheet" />
+  <script src="site_libs/c3-0.4.11/c3.min.js"></script>
+  <script src="site_libs/d3-3.5.5/d3.v3.min.js"></script>
+  <link href="site_libs/pivottable-2.19.0/pivot.min.css" rel="stylesheet" />
+  <script src="site_libs/pivottable-2.19.0/pivot.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/d3_renderers.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/c3_renderers.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.cs.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.da.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.de.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.es.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.fr.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.it.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.nl.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.pl.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.pt.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.ru.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.sq.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.tr.min.js"></script>
+  <script src="site_libs/pivottable-2.19.0/pivot.zh.min.js"></script>
+  <link href="site_libs/subtotal-1.10.0/subtotal.min.css" rel="stylesheet" />
+  <script src="site_libs/subtotal-1.10.0/subtotal.min.js"></script>
+  <script src="site_libs/polyfill-0.1/polyfill.min.js"></script>
+  <link href="site_libs/rpivotTable_style-0.1/rpivotTable.css" rel="stylesheet" />
+  <script src="site_libs/rpivotTable-binding-0.3.0/rpivotTable.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body class="layout-true">
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Clase 3. Conteo, Naturaleza y Tipos de Variables, Niveles de Medición","authors":[{"author":"Andrés González","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}]}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Clase 3. Conteo, Naturaleza y Tipos de Variables, Niveles de Medición</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+
+</div>
+
+<div class="d-byline">
+  
+  Andrés González
+  
+
+</div>
+
+<div class="d-article">
+<p>class: title-slide, middle, center</p>
+<p>background-image: url(img/LOGO-UM-COLOR-H.png) background-position: top right background-size: 20%</p>
+<p><br></p>
+<p>.line_space_07[</p>
+<h2 id="métodos-cuantitativos-de-investigación">Métodos Cuantitativos de Investigación</h2>
+<h3 id="text_80clase-n2">.text_80[Clase N°2]</h3>
+<p>] <br></p>
+<p>.line_space_11[ .text_100[Andrés González Santa Cruz, MA]</p>
+<p>.text_70[<a href="mailto:andres.gonzalez@umayor.cl" class="email">andres.gonzalez@umayor.cl</a>]</p>
+<p><br></p>
+<p>.text_70[]</p>
+<p>.text_90[Conteo, Naturaleza y Tipos de Variables, Niveles de Medición]</p>
+<p>]</p>
+<p><br></p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="img/blank_space.png" width="15%" /></p>
+</div>
+<p>class: center, middle, inverse, animated, fadeIn</p>
+<h1 id="conceptos-básicos-en-estadística">Conceptos básicos en estadística</h1>
+<p>??? Capítulo I Johnson &amp; Kuby; Ritchey,2002, Capítulo II <strong>metería también distribuciones, o en la próxima clase?, ver textos</strong> Conteo, Naturaleza y Tipos de Variables, Niveles de Medición</p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>## Características</td>
+</tr>
+<tr class="even">
+<td>- <strong>Población de interés (N)</strong>: Conjunto de elementos sobre los que se pretende analizar</td>
+</tr>
+<tr class="odd">
+<td>- <strong>Marco muestral</strong>: procedimientos o materiales que permitan identificar a todos los elementos de una población objetivo</td>
+</tr>
+<tr class="even">
+<td>- <strong>Muestreo</strong>: Selección de elementos que representarán a una población</td>
+</tr>
+<tr class="odd">
+<td>- <strong>Muestra (n)</strong>: Subconjunto, resultado el proceso de muestreo</td>
+</tr>
+<tr class="even">
+<td>- <strong>Unidad de observación</strong>: Elemento que es medido</td>
+</tr>
+<tr class="odd">
+<td>- <strong>Unidad de muestreo</strong>: Unidad mínima de observación del que se obtendrá información</td>
+</tr>
+<tr class="even">
+<td><br></td>
+</tr>
+<tr class="odd">
+<td><br></td>
+</tr>
+</tbody>
+</table>
+<p>.pull_c[ .red[La muestra es a la población, como la estimación estadística es al parámetro]]</p>
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+.regression table {
+  code-inline-font-size: "0.2em";
+  #font-size: 12px;     
+}
+</style>
+</div>
+<p>??? POBLACION: - Qué son los elementos: individuos, objetos u eventos, por poner un ejemplo. Importante definir la población. - Se pueden usar criterios geográficos (municipalidad, país, etc) o sectoriales/ temáticos (jugadores cartas pokemon, trabajadores de la salud) - Finita, delimitada en el tiempo, observable - Es muy caro hacer un censo</p>
+<p>MARCO MUESTRAL: - Estudio trabajadores de la salud, lo más típico es contar con la lista de los trabajadores</p>
+<p>MUESTREO: - Hay varios procedimientos: probabilísticos o no, por cuotas, por conveniencia, aleatorio, representativo - Probabilístico: “Todos los elementos de la población poseen una probabilidad de ser seleccionados conocida y diferente de 0. Las probabilidades no necesariamente son iguales.”</p>
+<p>MUESTRA: - En general, tiende a ser representativa en función de características de interés para los investigadores. De ahí que sea “en términos de” - Hay varios procedimientos para determinar el tamaño de la muestra que este curso no alcanza a ver, pero también dependerá de la naturaleza de las variables (continuas o proporciones). Para poder determinar adecuadamente el tamaño de una muestra siempre es necesario tener información previa, ya sea a partir de investigaciones o de un piloto. No es posible determinar un tamaño muestral sin tener información previa a la cual recurrir. También dependerá del tamaño atribuido a la población por la corección de muestra finita</p>
+<ul>
+<li>Población infinita Aquella población cuyo número de elementos no es conocido, pero se sabe que es grande.</li>
+</ul>
+<p>UNIDAD DE MUESTREO: - Muchas veces la unidad de obs. y la de muestreo no son lo mismo. Ej., yo puedo entrevistar a personas, pero mi unidad de muestreo son viviendas o familias.</p>
+<p>SOBRE CONTAR: - La lógica de contar permite abstraer la particularidad - C. W. Mills, La Imaginación Sociológica, en Canales. - Abstraer permite la numerabilidad de lo intersubjetivo, como dirá Canales. Nosotros asignamos números a la realidad, la mapeamos en base a una teoría (el autoritarismo no tiene números), traduciremos la información a números, se recomienda un volumen de datos importante, aunque sobre todo insesgado (de nada sirve mucho de sólo un grupo,ej. opinión pública chilena sobre establecer la embajada de USA en jerusalén, pero encuestar en el club palestino)</p>
+<p>EJERCICIO: - Aplique cada concepto al estudio de la composición de helio estimada de las estrellas de alfa centauri - El parámetro tiene error?, y la estimación tiene error?, recordar ejemplo de presidenciables –&gt; tienen error porque varía su valor</p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>class: center, middle, inverse</td>
+</tr>
+<tr class="even">
+<td><iframe width="560" height="315" src="https://www.youtube.com/embed/VNMIkDHkSbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tipos-y-niveles-de-medición">Tipos y Niveles de Medición</h2>
+.details-code[
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#.code_10_pre[</span>
+
+<span class='va'>gr3</span><span class='op'>&lt;-</span>
+<span class='fu'>DiagrammeR</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/DiagrammeR/man/grViz.html'>grViz</a></span><span class='op'>(</span><span class='st'>"
+digraph causal {
+
+  # Nodes
+  node [shape = plaintext]
+  a [label = 'Variable',fontsize=10]
+  b [label = 'Cualitativa o atributo\n(Nombradas)',fontsize=10]
+  c [label = 'Cuantitativa o numérica\n(Puntuaciones)',fontsize=10]
+  d [label = 'Nominal\n(No clasificada)',fontsize=10]
+  e [label = 'Ordinal\n(Clasificada)*',fontsize=10]
+  f [label = 'Discreta',fontsize=10]
+  g [label = 'Continua',fontsize=10]
+  
+  # Edges
+  edge [color = black,
+        arrowhead = vee]
+  a -&gt; b      
+  a -&gt; c      
+  b -&gt; d
+  b -&gt; e
+  c -&gt; f
+  c -&gt; g
+        
+  rankdir = TB
+{ rank = same; b; c}
+  rankdir = LR
+{ rank = same; d; e; f; g }
+
+  # Graph
+  graph [overlap = true]
+}"</span>, height<span class='op'>=</span><span class='fl'>400</span><span class='op'>)</span><span class='co'>#, height = '100%', width = '100%'</span>
+<span class='co'>#]</span>
+</code></pre>
+</div>
+</div>
+<p>]</p>
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-32ec146c0a2eed18d642" style="width:100%;height:400px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-32ec146c0a2eed18d642">{"x":{"url":"clase3_files/figure-html5//widgets/widget_unnamed-chunk-4.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>??? <em>Conteo, Naturaleza y Tipos de Variables, Niveles de Medición</em> [*] Ojo que la ordinal también podría adoptar una puntuación clasificada, ej., el lugar en que termina chile en los juegos olímpicos</p>
+<p>Para comprender las finas distinciones entre las propiedades de medición de las variables, usamos un esquema llamado niveles de medición. El nivel de medición de una variable identifica las propiedades de medición, las cuales determinan el tipo de operaciones matemáticas (suma, multiplicación, etc.) que pueden usarse apropiadamente con dicho nivel, as( como las fórmulas estad(sticas que se utilizan para probar las hipótesis teóricas. Estos niveles se llaman nominal, ordinal, de intervalo y de razón.</p>
+<p>Vimos que las variables distintos valores y pueden cambiar, lo que no ocurre con las constantes. Veamos qué tipos de valores hay disponibles</p>
+<ul>
+<li>Canales, página 17 y 44</li>
+</ul>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>## Niveles de Medición</td>
+</tr>
+<tr class="even">
+<td>| Niv. Medición | Clasificación | Orden | Un. Medida Constante | Cero Absoluto | |:——:|:—–:|:———:|:——:|:——:| | Nominal | X | | | | | Ordinal | X | X | | | | Intervalo | X | X | X | | | Razón | X | X | X | X | <br></td>
+</tr>
+<tr class="odd">
+<td>- Variables categóricas, cualitativas, no métricas - Nominales - Ordinales - Variables cuantitativas, métricas - Continuas - Discretas - Escalas - De Intervalo - Razón o Proporción</td>
+</tr>
+<tr class="even">
+<td>??? Comentarios:</td>
+</tr>
+<tr class="odd">
+<td>1. Nominales • Permiten clasificar las diferentes características de los casos en categorías excluyentes. • Ninguna tiene mayor jerarquía que la otra. Por lo tanto, difieren en cualidad, no en magnitud numérica. • Se les denominan variables dicotómicas cuando tienen sólo dos categorías de respuesta.</td>
+</tr>
+<tr class="even">
+<td>2. Ordinales • Sus valores se pueden clasificar pero también ordenar. • Hay categorías, pero además éstas mantienen un orden de mayor a menor e indican jerarquía • Se puede afirmar si son iguales o diferentes, y si uno es mayor o menor que el otro</td>
+</tr>
+<tr class="odd">
+<td>1) De Intervalo • Se parecen a las ordinales pero con una propiedad adicional:la diferencia entre dos valores de datos cualesquiera tiene un significado. • Es decir, se conoce la distancia exacta entre dos categorías. • Sólo tiene un cero (0) arbitrario (ausencia de cantidad) (ej. temperatura)</td>
+</tr>
+<tr class="even">
+<td>2) De Razón o Proporción • Tiene las mismas características del intervalo, pero tiene una propiedad adicional: consideran el cero absoluto, que indica “nada” de cantidad. • Para valores de este nivel tanto las diferencias como las proporciones tienen significado (ej. altura)</td>
+</tr>
+<tr class="odd">
+<td><strong>Es muy importante saber las propiedades de cada una, ya que de ello se derivarán nuestros supuestos</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="niveles-de-medición-continuación">Niveles de Medición (continuación)</h2>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="img/var_ritchey.png" width="600x" style="display: block; margin: auto;" /></p>
+</div>
+<p><span class="math inline">\(^{Fuente: Ritchey, 2002, p. 47}\)</span></p>
+<p>??? Comentarios: Desde luego hay variables que pueden medirse en más de un nivel, según el propósito de medición. Por ejemplo: la variable “Uso de internet para estudio/trabajo” • De razón  medida en “Horas al día” ( 0 a k horas) • Ordinal  medida mediante las categorías “Muy frecuentemente”; “Frecuentemente”; “Casi nunca”; “Nunca”. :::</p>
+<ul>
+<li><p>Cargue la librería <code>dplyr</code></p></li>
+<li><p>Abra la base de datos ChickWeight</p></li>
+<li><p>Descríbame las variables y su nivel de medición</p></li>
+<li><p>¿Qué se puede hacer con ellas?</p></li>
+</ul>
+<p>???</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"ChickWeight"</span><span class='op'>)</span>
+<span class='co'>#help("ChickWeight")</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>ChickWeight</span><span class='op'>$</span><span class='va'>weight</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="clase3_files/figure-html5/ejercicio-1.png" width="9750" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>ChickWeight</span><span class='op'>$</span><span class='va'>Time</span>,<span class='va'>ChickWeight</span><span class='op'>$</span><span class='va'>weight</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="clase3_files/figure-html5/ejercicio-2.png" width="9750" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span> <span class='va'>Diet</span>,  <span class='co'>#FORMATO FÓRMULA</span>
+        data <span class='op'>=</span> <span class='va'>ChickWeight</span>,
+        <span class='co'># se encuentra la variable dependiente (Y) y la variable independiente (X)</span>
+        frame <span class='op'>=</span> <span class='cn'>FALSE</span>,
+        notch <span class='op'>=</span> <span class='cn'>TRUE</span>,
+        xlab<span class='op'>=</span> <span class='st'>"Tipo de Dieta"</span>,
+        ylab<span class='op'>=</span><span class='st'>"Peso"</span>, <span class='co'>#etiquetas</span>
+        col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"white"</span>, <span class='st'>"steelblue"</span><span class='op'>)</span><span class='op'>)</span> <span class='co'>#etiquetas</span>
+</code></pre>
+</div>
+<p><img src="clase3_files/figure-html5/ejercicio-3.png" width="9750" /></p>
+</div>
+<p><br></p>
+<p><br></p>
+<ul>
+<li><p>Busque la base de datos “Resultado Consulta Individual”</p></li>
+<li><p>¿Qué variables hay ahí y de qué nivel? (primeras 5 columnas, sociodemográficas)</p></li>
+</ul>
+<p><br></p>
+<h2 id="para-la-próxima-clase">Para la próxima clase</h2>
+<ul>
+<li>En la siguiente tabla hay una base de datos sobre proceos de selección publicados por una universidad pública. Investíguela e identifique sus variables y sus propiedades en base al programa disponible. Justifique.</li>
+</ul>
+<p>.text_70[ - ¿Qué nivel es el grado?, - ¿Qué nivel es la jornada? - ¿Qué nivel es la jornada?, - ¿Qué nivel es el estado?, - ¿Qué nivel es “vesp”(vespertino)?]</p>
+<p>??? “<a href="http://datos.gob.cl.s3.amazonaws.com/Resultado_Consultas_Individuales.xlsx" class="uri">http://datos.gob.cl.s3.amazonaws.com/Resultado_Consultas_Individuales.xlsx</a>”</p>
+<hr />
+.code_10[
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>Error in invsible(&quot;1. Ver cuántas veces se concreta un proceso de selección y si eso depende del año de término&quot;): no se pudo encontrar la función &quot;invsible&quot;</code></pre>
+<div id="htmlwidget-53f6ae2582030bd65658" style="width:200px;height:6000px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-53f6ae2582030bd65658">{"x":{"visdat":{"61026f22718":["function () ","plotlyVisDat"]},"cur_data":"61026f22718","attrs":{"61026f22718":{"labels":{},"values":{},"hole":0.6,"textposition":"outside","textinfo":"text","sort":false,"automargin":true,"text":{},"direction":"clockwise","textfont":{"color":"black","size":13},"marker":{"colors":["#4D4D4D","#969696","#C3C3C3","#E6E6E6"]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"pie"}},"layout":{"margin":{"b":100,"l":50,"t":250,"r":50,"pad":4},"yaxis":{"showgrid":false,"zeroline":false,"showticklabels":true},"showlegend":false,"title":"Selection processes<br /> and times they were published<br /> ","font":{"family":"sans serif","size":14,"color":"black"},"autosize":true,"hovermode":"closest"},"source":"A","config":{"showSendToCloud":false},"data":[{"labels":[1,2,3,4],"values":[143,56,36,19],"hole":0.6,"textposition":["outside","outside","outside","outside"],"textinfo":"text","sort":false,"automargin":true,"text":["Only appears one time<br />56%(n=143)","Appears two times<br />22%(n=56)","Appears three times<br />14%(n=36)","Appears more than 3 times<br />8%(n=19)"],"direction":"clockwise","textfont":{"color":"black","size":13},"marker":{"color":"rgba(31,119,180,1)","colors":["#4D4D4D","#969696","#C3C3C3","#E6E6E6"],"line":{"color":"rgba(255,255,255,1)"}},"type":"pie","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<p>]</p>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:600px; overflow-x: scroll; width:100%">
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-02aa1655aba6b27659dc" style="width:800px;height:600px;" class="rpivotTable html-widget"></div>
+<script type="application/json" data-for="htmlwidget-02aa1655aba6b27659dc">{"x":{"data":{"id_pub":["0001","0002","0003","0004","0005","0006","0007","0008","0009","0010","0011","0012","0013","0014","0015","0016","0017","0018","0019","0020","0021","0022","0023","0024","0025","0026","0027","0028","0029","0030","0031","0032","0033","0034","0035","0036","0037","0038","0039","0040","0041","0042","0043","0044","0045","0046","0047","0048","0049","0050","0051","0052","0053","0054","0055","0056","0057","0058","0059","0060","0061","0062","0063","0064","0065","0066","0067","0068","0069","0070","0071","0072","0073","0074","0075","0076","0077","0078","0079","0080","0081","0082","0083","0084","0085","0086","0087","0088","0089","0090","0091","0092","0093","0094","0095","0096","0097","0098","0099","0100","0101","0102","0103","0104","0105","0106","0107","0108","0109","0110","0111","0112","0113","0114","0115","0116","0117","0118","0119","0120","0121","0122","0123","0124","0125","0126","0127","0128","0129","0130","0131","0132","0133","0134","0135","0136","0137","0138","0139","0140","0141","0142","0143","0144","0145","0146","0147","0148","0149","0150","0151","0152","0153","0154","0155","0156","0157","0158","0159","0160","0161","0162","0163","0164","0165","0166","0167","0168","0169","0170","0171","0172","0173","0174","0175","0176","0177","0178","0179","0180","0181","0182","0183","0184","0185","0186","0187","0188","0189","0190","0191","0192","0193","0194","0195","0196","0197","0198","0199","0200","0201","0202","0203","0204","0205","0206","0207","0208","0209","0210","0211","0212","0213","0214","0215","0216","0217","0218","0219","0220","0221","0222","0223","0224","0225","0226","0227","0228","0229","0230","0231","0232","0233","0234","0235","0236","0237","0238","0239","0240","0241","0242","0243","0244","0245","0246","0247","0248","0249","0250","0251","0252","0253","0254","0255","0256","0257","0258","0259","0260","0261","0262","0263","0264","0265","0266","0267","0268","0269","0270","0271","0272","0273","0274","0276","0277","0278","0279","0280","0281","0282","0283","0284","0285","0286","0287","0288","0289","0290","0291","0292","0293","0294","0295","0296","0297","0298","0299","0300","0301","0302","0303","0304","0305","0306","0307","0308","0309","0310","0311","0312","0313","0314","0316","0317","0318","0319","0320","0321","0322","0323","0324","0325","0326","0327","0328","0329","0330","0331","0332","0333","0334","0335","0336","0337","0338","0339","0340","0341","0342","0343","0344","0345","0346","0347","0348","0349","0351","0352","0353","0354","0355","0356","0357","0358","0359","0360","0361","0362","0363","0364","0365","0366","0367","0368","0369","0371","0372","0373","0374","0375","0376","0377","0378","0379","0381","0382","0383","0384","0385","0387","0388","0389","0390","0391","0392","0393","0396","0397","0398","0400","0401","0402","0403","0404","0405","0406","0407","0408","0409","0411","0412","0413","0415","0416","0417","0418","0419","0420","0421","0423","0424","0425","0426","0427","0428","0429","0431","0432","0433","0434","0435","0436","0437","0438","0439","0440","0441","0442","0443","0446","0449","0452","0453","0455","0457","0458","0459","0460","0461","0463","0464","0465","0466","0468","0469","0470","0471","0473","0475","0477","0478","0481","0482","0495","0496","0504","0517","0518","0530","0534","0536","0538","0542","0543","0548","0549","0552","0553","0554","0556","0558","0559","0561","0576","0577","0578","1755"],"id_proc":["[a257] medico(a) psiquiatra","[a466] medico(a) ginecólogo(a)","[a397] jefe(a) de sección (tesorería)","[a257] medico(a) psiquiatra","[a257] medico(a) psiquiatra","[a466] medico(a) ginecólogo(a)","[a257] medico(a) psiquiatra","[a332] médico(a) (psiquiatra)","[a210] médico(a) (psiquiatra)","[a466] medico(a) ginecólogo(a)","[a332] médico(a) (psiquiatra)","[a210] médico(a) (psiquiatra)","[a257] medico(a) psiquiatra","[a466] medico(a) ginecólogo(a)","[a340] médico(a) (psiquiatra)","[a332] médico(a) (psiquiatra)","[a210] médico(a) (psiquiatra)","[a257] medico(a) psiquiatra","[a496] periodista","[a495] periodista","[a485] periodista ( comunity manager)","[a309] técnico/a de soporte básico en computación","[a486] periodista (programación audiovisual)","[a466] medico(a) ginecólogo(a)","[a443] analista de gestión i (docencia)","[a471] técnico/a contable","[a257] medico(a) psiquiatra","[a414] psicólogo/a","[a340] médico(a) (psiquiatra)","[a257] medico(a) psiquiatra","[a424] editor/a","[a479] desarrollador técnico ti","[a478] desarrollador técnico ti","[a340] médico(a) (psiquiatra)","[a257] medico(a) psiquiatra","[a312] asistente de mantención","[a436] analista de gestión de personas","[a360] técnico/a de biblioteca","[a376] matrón/a","[a350] secretario/a b","[a268] jefe(a) de sección ( encargado de proyectos)","[a468] técnico/a especializado/a de laboratorio ( estabulario)","[a424] editor/a","[a291] secretario(a) de apoyo docente","[a397] jefe(a) de sección (tesorería)","[a398] analista de gestión ii (atención al visitante internacional)","[a377] chofer de ambulancia","[a422] mayordomo/a","[a292] asistente de laboratorio","[a466] medico(a) ginecólogo(a)","[a340] médico(a) (psiquiatra)","[a257] medico(a) psiquiatra","[a309] técnico/a de soporte básico en computación","[a409] analista informático","[a377] chofer de ambulancia","[a407] analista de estudios","[a413] jefe/a de área ( vigilancia y seguridad)","[a319] asistente de biblioteca","[a430] analista contable ii","[a257] medico(a) psiquiatra","[a340] médico(a) (psiquiatra)","[a351] auxiliar de servicios","[a458] asistente de biblioteca","[a443] analista de gestión i (docencia)","[a397] jefe(a) de sección (tesorería)","[a411] analista de gestión i","[a367] técnico/a contable ( conciliaciones bancarias)","[a337] administrativo/a contable","[a331] administrativo(a) contable ( cobranzas)","[a361] analista de gestión i","[a402] editor/a","[a282] analista de gestión ii ( apoyo informático)","[a390] analista de gestión iii ( licitación y contratos)","[a391] secretario(a) de apoyo docente","[a451] secretario/a c","[a309] técnico/a de soporte básico en computación","[a391] secretario(a) de apoyo docente","[a340] médico(a) (psiquiatra)","[a257] medico(a) psiquiatra","[a392] auxiliar de servicios","[a389] bibliotecario/a","[a414] psicólogo/a","[a438] administrativo/a de cobranzas","[a357] secretario(a) de apoyo docente","[a298] auxiliar de servicios","[a398] analista de gestión ii (atención al visitante internacional)","[a452] auxiliar de servicios","[a430] analista contable ii","[a420] secretaria(o) b ( secretario/a de dirección jurídica)","[a377] chofer de ambulancia","[a400] analista de gestión ii (analista de crédito y cobranzas)","[a376] matrón/a","[a440] auxiliar de servicios","[a392] auxiliar de servicios","[a424] editor/a","[a415] asistente de laboratorio ( pañolero)","[a438] administrativo/a de cobranzas","[a397] jefe(a) de sección (tesorería)","[a356] analista contable ii ( analista de conciliaciones bancarias)","[a285] administrativo(a) contable","[a410] jefe(a) de área ( acreditación)","[acta2019-20] analista de gestión administrativa","[a436] analista de gestión de personas","[a282] analista de gestión ii ( apoyo informático)","[a436] analista de gestión de personas","[a420] secretaria(o) b ( secretario/a de dirección jurídica)","[a336] entrenador/a deportivo/a ( seleccion futsal)","[a292] asistente de laboratorio","[a422] mayordomo/a","[a291] secretario(a) de apoyo docente","[a351] auxiliar de servicios","[a429] administrativo/a de apoyo","[a386] jefe/a de oficina ( vigilancia )","[a161] analista de gestión ii","[a340] médico(a) (psiquiatra)","[a394] administrativo/a de proceso","[a393] administrativo/a de proceso","[a377] chofer de ambulancia","[a399] auxiliar de servicios","[a400] analista de gestión ii (analista de crédito y cobranzas)","[a367] técnico/a contable ( conciliaciones bancarias)","[a418] secretario/a b","[a371] administrativo/a de apoyo","[a409] analista informático","[a292] asistente de laboratorio","[acta2019-13] analista de gestión ii","[a363] auxiliar de servicios","[a319] asistente de biblioteca","[a379] secretario/a b","[a387] administrativo/a de apoyo","[a391] secretario(a) de apoyo docente","[a405] administrativo(a) de apoyo","[a407] analista de estudios","[a414] psicólogo/a","[a415] asistente de laboratorio ( pañolero)","[a366] mayordomo/a","[a257] medico(a) psiquiatra","[a293] secretario(a) b","[a282] analista de gestión ii ( apoyo informático)","[a319] asistente de biblioteca","[a281] analista contable ii","[a334] asistente de biblioteca","[a289] asistente de biblioteca","[a372] secretario/a b","[acta2019-11] administrativo(a) de apoyo","[a338] técnico(a) de manteción","[a373] secretario(a) de apoyo docente","[a257] medico(a) psiquiatra","[a397] jefe(a) de sección (tesorería)","[a301] mayordomo(a)","[acta2019-28] encargado/a de bodega, bienes y servicios","[a398] analista de gestión ii (atención al visitante internacional)","[a375] secretario/a de apoyo docente","[a360] técnico/a de biblioteca","[a291] secretario(a) c","[a292] asistente de laboratorio","[a341] técnico/a eléctrico ( climatización)","[a361] analista de gestión i","[a406] analista de gestión de personas","[a380] administrativo/a de registro academico ( titulador/a)","[a331] administrativo(a) contable","[a356] analista contable ii ( analista de conciliaciones bancarias)","[a409] analista informático","[a337] administrativo/a contable","[a378] jefe/a de laboratorio ( jefe/a de calidad)","[a319] asistente de biblioteca","[a405] administrativo(a) de apoyo","[a388] operador(a) de radio","[a285] administrativo(a) contable","[a340] médico(a) (psiquiatra)","[a338] técnico(a) de manteción","[a318] analista de gestión administrativa","[a348] periodista","[a331] administrativo(a) contable","[a345] secretario(a) b","[acta2019-14] encargado(a) de laboratorio","[a307] administrativo(a) de apoyo","[a321] auxiliar de servicios","[a379] secretario/a b","[a282] analista de gestión ii ( apoyo informático)","[a339] auxiliar de servicios","[a391] secretario(a) de apoyo docente","[a383] secretario(a) b (departamento)","[a311] técnico/a en atención de párvulos","[a220] técnico(a) de soporte básico en computación","[ir2018-25] profesional especializado de laboratorio (microbiologia)","[ir2018-12] estafeta","[a251] administrativo contable","[acta2018-09] analista de gestión administrativa","[ir2018-28] analista de gestión ii","[ir2018-20] encargado(a) de unidad menor","[acta2019-24] administrativo(a) de registro curricular","[a364] técnico/a eléctrico","[a358] jefe(a) de área ( gestión académica estudiantil y planes de estudio)","[a240] psicologo(a) (centro de atención psicológica)","[a359] analista de gestión ii (encargado/a de compras)","[acta2019-26] encargado(a) de vinculación con el medio","[a303] analista de gestión i","[a298] auxiliar de servicios","[acta2019-05] asistente de biblioteca","[acta2019-23] asistente de laboratorio","[a161] analista de gestión ii","[a312] asistente de mantención","[a337] administrativo/a contable","[a377] chofer de ambulancia","[a351] auxiliar de servicios","[a340] médico(a) (psiquiatra)","[a281] analista contable ii","[a346] secretaria/o b ( departamentos de derecho público, privado y ciencias del derecho)","[a305] secretario/a b","[a374] analista de gestión i ( coordinador/a docente)","[a312] asistente de mantención","[a342] jefe(a) de sección (cursos culturales de formación integral (ccfi))","[a382] editor/a ( diario institucional)","[a306] administrativo(a) de apoyo","[a316] jefe/a de sección ( servicio social)","[acta2019-28] encargado/a de bodega, bienes y servicios","[a363] auxiliar de servicios","[a385] asistente de mantención","[a384] mayordomo/a","[a344] administrativo/a de apoyo","[a293] secretario(a) b","[a243] mayordomo(a)","[a372] secretario/a b","[a312] estafeta","[a285] administrativo(a) contable","[a317] mayordomo(a)","[a301] mayordomo(a)","[a300] secretario(a) de apoyo docente","[a341] técnico/a eléctrico ( climatización)","[a298] auxiliar de servicios","[a353] analista de gestión ii ( analista curricular)","[a279] estafeta","[a361] analista de gestión i","[a308] secretario(a) b","[a340] médico(a) (psiquiatra)","[a259] mayordomo(a)","[a281] analista contable ii","[a290] bibliotecario(a)","[a326] profesional especializado de laboratorio (especialista equipo eqm 160036)","[a325] mayordomo(a) (pañolero)","[a267] administrativo(a) especializado","[a286] administrativo(a) de recursos humanos","[acta2019-04] bibliotecario(a)","[a270_a] profesional de extensión( director musical ballet folclórico)","[ir2018-19] asistente de mantención (cerrajero)","[a324] mayordomo(a) (pañolero)","[a323] secretario(a) c","[a372] secretario/a b","[a348] periodista","[a357] secretario(a) de apoyo docente","[a350] secretario/a b","[a302] administrativo(a) de registro curricular (titulador/a)","[a314] secretario(a) b","[a315] analista  informático","[a304] analista de gestión administrativa","[acta2019-15] encargado(a) de vinculación con el medio","[a274] técnico(a) de  laboratorio","[a247] encargado(a) de bodega, bienes y servicios","[a334] asistente de biblioteca","[a334] asistente de biblioteca","[a331] administrativo/a contable","[a340] médico(a) (psiquiatra)","[a305] secretario/a c (administrativo/a)","[a303] analista de base de datos","[a341] técnico/a eléctrico ( climatización)","[a311] técnico/a en atención de párvulos","[a356] analista contable ii ( analista de conciliaciones bancarias)","[a307] administrativo(a) de apoyo","[a335] auxiliar de servicios","[a312] estafeta","[a321] auxiliar de servicios","[a240] psicologo(a) (centro de atención psicológica)","[a308] secretario(a) b","[acta2019-05] asistente de biblioteca","[a243] mayordomo(a)","[a259] mayordomo(a)","[acta2019-10] jefe(a) de área ( licitación y contratos)","[a277] profesional especializado(a) de laboratorio ( operador(a) equipos espectroscópicos y ft-ir)","[acta2019-29] técnico(a) de compras","[acta2019-09] jefe(a) de área ( compras y servicios institucionales)","[acta2019-07] administrativo(a) de apoyo","[a336] entrenador(a) deportivo(a) (selección futsal)","[a329] secretaria(o) de apoyo docente","[a293] secretario(a) c","[a307] administrativo(a) de apoyo","[a308] secretario(a) b","[a289] asistente de biblioteca","[a243] estafeta","[a311] técnico/a en atención de párvulos","[a292] asistente de laboratorio","[a291] secretario(a) c","[ir2018-03] administrativo(a) de apoyo","[a319] asistente de biblioteca","[a325] mayordomo(a) (pañolero)","[a317] mayordomo(a)","[a210] médico(a) (psiquiatra)","[a264] administrativo(a) de recursos humanos","[acta2019-04] bibliotecario(a)","[a321] auxiliar de servicios","[a257] medico(a) psiquiatra","[a271] chofer de ambulancia","[a225] analista presupuestario","[a224] jefe(a) de sección (director/a centro atención psicológica)","[a283] jefe(a) de sección ( análisis de cuentas)","[a270_a] profesional de extensión( director musical ballet folclórico)","[a259] mayordomo(a)","[a259] auxiliar de servicios","[acta2019-24] administrativo(a) de registro curricular","[a288] analista contable ii","[a286] administrativo(a) de recursos humanos","[a294] auditor(a) i","[a317] mayordomo(a)","[a227] mayordomo","[ir2018-34] analista de gestión ii ( encargado de oficina de retiro)","[acta2019-08] secretario(a) b","[a281] analista contable ii","[a287] secretario(a) b","[ir2018-19] asistente de mantención (cerrajero)","[a276] médico cirujano","[a272] secretario(a) de apoyo docente","[a284] estafeta","[acta2019-02] secretario(a) de apoyo docente","[acta2019-03] técnico(a) de laboratorio","[acta2019-25] asistente de mantención","[acta2019-20] analista de gestión administrativa","[acta2019-26] encargado(a) de vinculación con el medio","[acta2019-15] encargado(a) de vinculación con el medio","[acta2019-19] analista de gestión administrativa","[acta2019-18] analista de gestión ii","[acta2019-17] encargado(a) de vinculación con el medio","[acta2019-06]jefe(a) de area ( contabilidad )","[a274] técnico(a) de  laboratorio","[acta2019-14] encargado(a) de laboratorio","[ir2018-19] asistente de mantención (cerrajero)","[a245] jefe de sección vigilancia y seguridad","[acta2019-05] asistente de biblioteca","[a281] analista contable ii","[ir2018-37] jefe(a) de finanzas","[a243] estafeta","[a160] analista de gestión i","[ir2018-31] enfermero(a)","[a210] médico(a) (psiquiatra)","[a270_b] profesional de extensión( director coreográfico ballet folclórico)","[a254] analista de gestión administrativa","[ir2018-39] asistente social estudiantil","[a247] encargado(a) de bodega, bienes y servicios","[a269] jefe(a) de área ( apoyo al estudiante)","[a252] administrativo(a) de registro curricular","[ir2018-19] asistente de mantención (cerrajero)","[a242] bibliotecario(a)","[a225] analista financiero y control de gestión","[a271] chofer de ambulancia","[acta2019-15] encargado(a) de vinculación con el medio","[acta2019-04] bibliotecario(a)","[acta2019-12] encargado(a) de vinculación con el medio","[acta2019-26] encargado(a) de vinculación con el medio","[a274] técnico(a) de  laboratorio","[acta2019-14] encargado(a) de laboratorio","[acta2019-11] administrativo(a) de apoyo","[a238] psicologo(a)","[a256] jefe(a) de finanzas","[a226] secretaria(o) c (administrativo)","[a210] médico(a) (psiquiatra)","[a248] asistente social estudiantil","[a262] maestro(a) de cocina","[a228] secretaria de apoyo docente","[a261] administrativo(a) de compras","[a243] estafeta","[a259] auxiliar de servicios","[a268] jefe(a) de sección ( encargado de proyectos)","[a240] psicologo(a) (centro de atención psicológica)","[a257] medico(a) psiquiatra","[a160] analista de gestión i","[a262] maestro(a) de cocina","[a237] psicólogo(a)","[a264] administrativo(a) de recursos humanos","[a260] técnico(a) de laboratorio","[ir2018-22] jefe(a) sección ( administracion interna y pagarés)","[ir2018-27] analista de proyectos i","[a245] jefe de sección vigilancia y seguridad","[a231] administrativo de recursos humanos","[a231] administrativo de recursos humanos","[a234] abogado(a) dirección jurídica","[a234] abogado(a) dirección jurídica","[a234] abogado(a) dirección jurídica","[a234] abogado(a) dirección jurídica","[a229] mayordomo","[ir2018-23]directora sala cuna y jardin infantil ( jefe de sección)","[a210] médico(a) (psiquiatra)","[ir2018-08] secretario(a) b departamento","[a230] encargado de laboratorio (microbiología)","[a247] encargado(a) de bodega, bienes y servicios","[a210] médico(a) (psiquiatra)","[a239] secretario(a) de apoyo docente","[a220] técnico(a) de soporte básico en computación","[a243] estafeta","[ir2018-18] secretario(a) apoyo docente","[a224] jefe(a) de sección (director/a centro atención psicológica)","[a259] auxiliar de servicios","[a226] secretaria(o) c (administrativo)","[a226] secretaria(o) c (administrativo)","[a210] médico(a) (psiquiatra)","[ir2018-27] analista de proyectos i","[ir2018-12] estafeta","[ir2018-13] secretario(a) b ( departamento)","[a235] psicólogo unidad funcional de género, diversidad y equidad","[ir2018-34] analista de gestión ii ( encargado de oficina de retiro)","[ir2018-19] asistente de mantención (cerrajero)","[ir2018-03] administrativo(a) de apoyo","[a222] administrativo(a) contable (operaciones)","[a241] encargado(a) de laboratorio (procesamiento de minerales)","[a242] bibliotecario(a)","[ir2018-31] enfermero(a)","[a223] encargado de compra unidad","[ir2018-25] profesional especializado de laboratorio (microbiologia)","[a228] secretaria de apoyo docente","[a210] médico(a) (psiquiatra)","[ir2018-23] director(a) sala cuna y jardín infantil (jefe de sección)","[acta2018 -19] asistente de biblioteca ( vespertino)","[acta2018 -18] asistente de biblioteca","[a215] analista de acreditación","[ir2018-16] analista de gestión administrativa","[a177] administrativo(a) de proceso","[a237] psicólogo(a)","[ir2018-10] técnico en atención de párvulos","[a239] secretario(a) de apoyo docente","[ir2018-11] cajero b 2° categoría","[a230] encargado de laboratorio (microbiología)","[a231] administrativo de recursos humanos","[ir2018-09] secretario(a) a (decanato)","[a239] secretario(a) de apoyo docente","[a241] encargado(a) de laboratorio (procesamiento de minerales)","[a210] médico(a) (psiquiatra)","[ir2018-13] secretario(a) b ( departamento)","[a235] psicólogo dirección de género, diversidad y equidad","[ir2018-18] secretario(a) apoyo docente","[ir2018-08] secretario(a) b departamento","[a228] secretaria de apoyo docente","[ir2018-02] mayordomo(a)","[ir2018-05] administrativo(a) de apoyo (recepcionista)","[a227] mayordomo","[acta2018 -19] asistente de biblioteca ( vespertino)","[a226] secretaria(o) c (administrativo)","[ir2018-04] auxiliar de enfermería","[a213] administrativo(a) de proceso","[a187] auxiliar de servicios","[a225] analista financiero y control de gestión","[a212] bibliotecario(a)","[a222] administrativo(a) contable (operaciones)","[ir2018-01] asistente de grupo artístico (inspector de orquesta)","[ir2018-13] secretario(a) b ( departamento)","[a217] medico(a) (cirujano)","[a207] técnico(a) de laboratorio especializado (estabulario)","[a126] auxiliar de servicios","[a191] encargado(a) de laboratorio","[a208] analista de gestión administrativa","[a203] chofer de ambulancia","[a199] administrativo de apoyo","[a200] psicólogo","[a189] analista contable ii","[a004] secretario de apoyo docente","[acta2018-14] asistente de laboratorio","[acta2018-16] administrativo de apoyo","[a179:1] secretario ( b) de dirección","[a198] analista de gestión estratégica","[a85] analista de gestión estratégica","[a193] jefe de área (área de internacionalización del postgrado)","[a201] analista de gestión i","[a173] analista informático ( analista ti)","[a130:2] mayordomo","[a194] jefe de administración y finanzas","[a169] analista de gestión ii","[a98] estafeta","[acta2018-12] mayordomo","[a180] analista de gestión ii","[acta2018-15] técnico de laboratorio","[a438] administrativo/a de cobranzas"],"cod_proc_sel":["a257","a466","a397","a257","a257","a466","a257","a332","a210","a466","a332","a210","a257","a466","a340","a332","a210","a257","a496","a495","a485","a309","a486","a466","a443","a471","a257","a414","a340","a257","a424","a479","a478","a340","a257","a312","a436","a360","a376","a350","a268","a468","a424","a291","a397","a398","a377","a422","a292","a466","a340","a257","a309","a409","a377","a407","a413","a319","a430","a257","a340","a351","a458","a443","a397","a411","a367","a337","a331","a361","a402","a282","a390","a391","a451","a309","a391","a340","a257","a392","a389","a414","a438","a357","a298","a398","a452","a430","a420","a377","a400","a376","a440","a392","a424","a415","a438","a397","a356","a285","a410","acta2019-20","a436","a282","a436","a420","a336","a292","a422","a291","a351","a429","a386","a161","a340","a394","a393","a377","a399","a400","a367","a418","a371","a409","a292","acta2019-13","a363","a319","a379","a387","a391","a405","a407","a414","a415","a366","a257","a293","a282","a319","a281","a334","a289","a372","acta2019-11","a338","a373","a257","a397","a301","acta2019-28","a398","a375","a360","a291","a292","a341","a361","a406","a380","a331","a356","a409","a337","a378","a319","a405","a388","a285","a340","a338","a318","a348","a331","a345","acta2019-14","a307","a321","a379","a282","a339","a391","a383","a311","a220","ir2018-25","ir2018-12","a251","acta2018-09","ir2018-28","ir2018-20","acta2019-24","a364","a358","a240","a359","acta2019-26","a303","a298","acta2019-05","acta2019-23","a161","a312","a337","a377","a351","a340","a281","a346","a305","a374","a312","a342","a382","a306","a316","acta2019-28","a363","a385","a384","a344","a293","a243","a372","a312","a285","a317","a301","a300","a341","a298","a353","a279","a361","a308","a340","a259","a281","a290","a326","a325","a267","a286","acta2019-04","a270_a","ir2018-19","a324","a323","a372","a348","a357","a350","a302","a314","a315","a304","acta2019-15","a274","a247","a334","a334","a331","a340","a305","a303","a341","a311","a356","a307","a335","a312","a321","a240","a308","acta2019-05","a243","a259","acta2019-10","a277","acta2019-29","acta2019-09","acta2019-07","a336","a329","a293","a307","a308","a289","a243","a311","a292","a291","ir2018-03","a319","a325","a317","a210","a264","acta2019-04","a321","a257","a271","a225","a224","a283","a270_a","a259","a259","acta2019-24","a288","a286","a294","a317","a227","ir2018-34","acta2019-08","a281","a287","ir2018-19","a276","a272","a284","acta2019-02","acta2019-03","acta2019-25","acta2019-20","acta2019-26","acta2019-15","acta2019-19","acta2019-18","acta2019-17","acta2019-06","a274","acta2019-14","ir2018-19","a245","acta2019-05","a281","ir2018-37","a243","a160","ir2018-31","a210","a270_b","a254","ir2018-39","a247","a269","a252","ir2018-19","a242","a225","a271","acta2019-15","acta2019-04","acta2019-12","acta2019-26","a274","acta2019-14","acta2019-11","a238","a256","a226","a210","a248","a262","a228","a261","a243","a259","a268","a240","a257","a160","a262","a237","a264","a260","ir2018-22","ir2018-27","a245","a231","a231","a234","a234","a234","a234","a229","ir2018-23","a210","ir2018-08","a230","a247","a210","a239","a220","a243","ir2018-18","a224","a259","a226","a226","a210","ir2018-27","ir2018-12","ir2018-13","a235","ir2018-34","ir2018-19","ir2018-03","a222","a241","a242","ir2018-31","a223","ir2018-25","a228","a210","ir2018-23","acta2018 -19","acta2018 -18","a215","ir2018-16","a177","a237","ir2018-10","a239","ir2018-11","a230","a231","ir2018-09","a239","a241","a210","ir2018-13","a235","ir2018-18","ir2018-08","a228","ir2018-02","ir2018-05","a227","acta2018 -19","a226","ir2018-04","a213","a187","a225","a212","a222","ir2018-01","ir2018-13","a217","a207","a126","a191","a208","a203","a199","a200","a189","a004","acta2018-14","acta2018-16","a179:1","a198","a85","a193","a201","a173","a130:2","a194","a169","a98","acta2018-12","a180","acta2018-15","a438"],"n_filas":[7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,8,7,8,8,7,8,7,7,8,8,8,7,7,7,7,7,7,7,7,7,7,7,7,8,7,8,8,7,7,7,7,8,7,7,8,8,7,7,7,7,7,7,7,8,8,8,8,9,8,8,7,7,7,7,7,7,7,7,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8,8,8,7,7,7,7,7,7,7,7,7,7,8,7,7,8,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,7,8,7,7,8,7,7,8,7,8,8,7,7,8,7,7,8,7,7,7,8,7,8,8,7,7,7,7,7,7,7,7,7,7,7,8,8,7,8,8,8,8,7,7,7,7,8,8,7,8,8,8,8,8,8,8,8,8,8,8,8,8,7,8,8,7,7,7,7,7,7,7,8,8,8,7,8,8,8,8,7,7,7,7,7,7,8,7,7,7,8,7,7,7,7,8,7,7,8,7,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,7,8,8,8,8,8,8,8,7,7,6,7,7,7,7,7,7,7,6,6,7,7,7,7,7,7,8,8,8,8,8,7,7,7,7,7,7,7,7,7,7,8,7,7,7,7,8,7,7,7,8,8,8,8,7,7,7,7,7,7,7,7,8,8,8,7,7,7,8,8,7,8,8,8,7,7,7,8,8,8,8,7,7,7,8,7,7,8,7,8,8,7,8,8,8,7,8,8,7,8,7,7,7,7,7,7,7,7,7,8,8,7,7,8,8,8,7,7,7,7,7,7,7,7,8,7,8,8,8,7,8,8,8,8,8,8,8,8,7,8,8,7,7,8,7,7,8,7,7,7,7,7,7,7,8,8,7,7,7,8,8,7,7,8,7,7,7,7,8,8,8,8,8,7,8,7,8,7,7,8,7,7,6,7,7,7,7,7,8,8,7,7,7,8,8,7,7,8,7,8,6,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,5],"est":["profesional ","ley 19664 11 hrs","profesional ","profesional ","profesional ","ley 19664 11 hrs","profesional ","ley 19664 11 hrs","ley 19664 11 hrs","ley 19664 11 hrs","ley 19664 11 hrs","ley 19664 11 hrs","profesional ","ley 19664 11 hrs","ley 19664 22 hrs","ley 19664 11 hrs","ley 19664 11 hrs","profesional ","profesional ","profesional ","profesional ","tecnico ","profesional ","ley 19664 11 hrs","profesional ","tecnico ","profesional ","profesional ","ley 19664 22 hrs","profesional ","profesional ","profesional ","profesional ","ley 19664 22 hrs","profesional ","tecnico ","profesional ","tecnico ","profesional ","administrativo ","profesional ","tecnico ","profesional ","administrativo ","profesional ","profesional ","tecnico ","auxiliar ","tecnico ","ley 19664 11 hrs","ley 19664 22 hrs","profesional ","tecnico ","profesional ","tecnico ","profesional ","profesional ","administrativo ","profesional ","profesional ","ley 19664 22 hrs","auxiliar ","administrativo ","profesional ","profesional ","profesional ","tecnico ","tecnico ","tecnico ","profesional ","profesional ","profesional ","profesional ","administrativo ","administrativo ","tecnico ","administrativo ","ley 19664 22 hrs","profesional ","auxiliar ","profesional ","profesional ","tecnico ","administrativo ","auxiliar ","profesional ","auxiliar ","profesional ","administrativo ","tecnico ","profesional ","profesional ","auxiliar ","auxiliar ","profesional ","tecnico ","tecnico ","profesional ","profesional ","tecnico ","profesional ","profesional ","profesional ","profesional ","profesional ","administrativo ","profesional ","tecnico ","auxiliar ","administrativo ","auxiliar ","administrativo ","administrativo ","profesional ","ley 19664 22 hrs","administrativo ","administrativo ","tecnico ","auxiliar ","profesional ","tecnico ","administrativo ","administrativo ","profesional ","tecnico ","profesional ","auxiliar ","administrativo ","administrativo ","administrativo ","administrativo ","administrativo ","profesional ","profesional ","tecnico ","auxiliar ","profesional ","administrativo ","profesional ","administrativo ","profesional ","administrativo ","administrativo ","administrativo ","administrativo ","tecnico ","administrativo ","profesional ","profesional ","auxiliar ","administrativo ","profesional ","administrativo ","tecnico ","administrativo ","tecnico ","tecnico ","profesional ","profesional ","administrativo ","tecnico ","profesional ","profesional ","tecnico ","profesional ","administrativo ","administrativo ","auxiliar ","tecnico ","ley 19664 22 hrs","tecnico ","profesional ","profesional ","tecnico ","administrativo ","profesional ","administrativo ","auxiliar ","administrativo ","profesional ","auxiliar ","administrativo ","administrativo ","tecnico ","tecnico ","profesional ","auxiliar ","tecnico ","profesional ","profesional ","administrativo ","administrativo ","tecnico ","profesional ","profesional ","profesional ","profesional ","profesional ","auxiliar ","administrativo ","tecnico ","profesional ","tecnico ","tecnico ","tecnico ","auxiliar ","ley 19664 22 hrs","profesional ","administrativo ","administrativo ","profesional ","tecnico ","profesional ","profesional ","administrativo ","profesional ","administrativo ","auxiliar ","tecnico ","auxiliar ","administrativo ","administrativo ","auxiliar ","administrativo ","auxiliar ","tecnico ","auxiliar ","auxiliar ","administrativo ","tecnico ","auxiliar ","profesional ","auxiliar ","profesional ","administrativo ","ley 19664 22 hrs","auxiliar ","profesional ","profesional ","profesional ","auxiliar ","administrativo ","administrativo ","profesional ","profesional ","tecnico ","auxiliar ","administrativo ","administrativo ","profesional ","administrativo ","administrativo ","administrativo ","administrativo ","profesional ","profesional ","profesional ","tecnico ","administrativo ","administrativo ","administrativo ","tecnico ","ley 19664 22 hrs","administrativo ","profesional ","tecnico ","tecnico ","profesional ","administrativo ","auxiliar ","auxiliar ","auxiliar ","profesional ","administrativo ","administrativo ","auxiliar ","auxiliar ","profesional ","profesional ","tecnico ","profesional ","administrativo ","profesional ","administrativo ","administrativo ","administrativo ","administrativo ","administrativo ","auxiliar ","tecnico ","tecnico ","administrativo ","administrativo ","administrativo ","auxiliar ","auxiliar ","ley 19664 11 hrs","administrativo ","profesional ","auxiliar ","profesional ","tecnico ","profesional ","profesional ","profesional ","profesional ","auxiliar ","auxiliar ","administrativo ","profesional ","administrativo ","profesional ","auxiliar ","auxiliar ","profesional ","administrativo ","profesional ","administrativo ","tecnico ","ley 19664 22 hrs","administrativo ","auxiliar ","administrativo ","tecnico ","tecnico ","profesional ","profesional ","profesional ","profesional ","profesional ","profesional ","profesional ","tecnico ","profesional ","tecnico ","profesional ","administrativo ","profesional ","profesional ","auxiliar ","profesional ","profesional ","ley 19664 11 hrs","profesional ","profesional ","profesional ","administrativo ","profesional ","administrativo ","tecnico ","profesional ","profesional ","tecnico ","profesional ","profesional ","profesional ","profesional ","tecnico ","profesional ","administrativo ","profesional ","profesional ","administrativo ","ley 19664 11 hrs","profesional ","tecnico ","administrativo ","administrativo ","auxiliar ","auxiliar ","profesional ","profesional ","profesional ","profesional ","tecnico ","profesional ","administrativo ","tecnico ","profesional ","profesional ","profesional ","administrativo ","administrativo ","profesional ","profesional ","profesional ","profesional ","auxiliar ","profesional ","ley 19664 11 hrs","administrativo ","profesional ","administrativo ","ley 19664 11 hrs","administrativo ","tecnico ","auxiliar ","administrativo ","profesional ","auxiliar ","administrativo ","administrativo ","ley 19664 11 hrs","profesional ","auxiliar ","administrativo ","profesional ","profesional ","tecnico ","administrativo ","tecnico ","profesional ","profesional ","profesional ","administrativo ","profesional ","administrativo ","ley 19664 11 hrs","profesional ","administrativo ","administrativo ","profesional ","profesional ","administrativo ","profesional ","tecnico ","administrativo ","tecnico ","profesional ","administrativo ","administrativo ","administrativo ","profesional ","ley 19664 11 hrs","administrativo ","profesional ","administrativo ","administrativo ","administrativo ","auxiliar ","administrativo ","auxiliar ","administrativo ","administrativo ","tecnico ","administrativo ","auxiliar ","profesional ","profesional ","tecnico ","tecnico ","administrativo ","ley 19664 22 hrs","tecnico ","auxiliar ","profesional ","profesional ","tecnico ","administrativo ","profesional ","profesional ","administrativo ","tecnico ","administrativo ","administrativo ","profesional ","profesional ","profesional ","profesional ","profesional ","auxiliar ","profesional ","profesional ","auxiliar ","auxiliar ","profesional ","tecnico ","tecnico "],"grado":["06",null,"10","06","06",null,"06",null,null,null,null,null,"06",null,null,null,null,"06","13","13","13","17","13",null,"10","del 14 al 12","06","13",null,"06","10","10","10",null,"06","20","10","18","13","17","10","14","10","17","10","13","19","21","20",null,null,"06","17","10","19","10","del 08 al 06","20","13","06",null,"23","20","10","10","10","14","17","17","10","10","13","14","17","20","17","17",null,"06","23","14","13","17","17","23","13","23","13","17","19","13","13","23","23","10","20","17","10","13","17","del 08 al 06","14","10","13","10","17","13","del 20 al 19","21","17","23","20","10","13",null,"del 17 al 15","del 17 al 15","19","23","13","14","17","20","10","del 20 al 19","13","23","20","17","20","17","20","10","13","20","21","06","17","13","20","13","20","20","17","20","13","17","06","10","21","20","13","17","18","20","20","17","10","10","17","17","13","10","17","10","20","20","21","17",null,"13","14","13","17","17","13","20","23","17","13","23","17","17","17","17","11","23","17","14","13","16","17","17","06","13","13","13","10","23","20","20","13","20","17","19","23",null,"13","17","17","10","20","10","10","20","10","20","23","20","21","20","17","21","17","21","17","21","21","17","17","23","13","23","10","17",null,"21","13","14","11","21 ","12","17","14","13","20","21","20","17","13","17","17","17","17","10","14","13","17","20","20","20","17",null,"20","13","17","17","13","20","23","21","23","13","17","20","21","21","08","11","14","08","20","13","17","20","20","17","20","23","17","20","20","20","20","21","21",null,"17","14","23","06","19","10","10","del 10 al 08","13","21","23","17","13","17","10","21","21","13","17","13","17","20",null,"17","23","17","17","20","14","13","13","14","13","13","08","17","13","20","10","20","13","10","23","10","13",null,"13","14","13","20","08","17","20","14","10","19","13","14","13","13","17","13","20","13","10","20",null,"13","17","17","17","23","23","10","13","06","10","17","13","17","17","10","10","10","17","17","08","08","08","08","21","10",null,"17","13","20",null,"17","17","23","17","10","23","20","20",null,"10","23","17","13","13","20","20","17","13","14","13","17","11","17",null,"10","20","20","10","14","17","13","17","17","17","13","17","13","17","13",null,"17","13","17","17","17","21","20","21","20","20","17","17","23","10","14","17","20","17",null,"14","23","13","14","18","20","13","13","17","20","20","17","10","10","08","10","10","21","10","13","23","21","13","17","17"],"jornada":["1/4 jornada",null,null,"1/4 jornada","1/4 jornada",null,"1/4 jornada",null,null,null,null,null,"1/4 jornada",null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,"1/4 jornada",null,null,"1/4 jornada",null,null,null,null,"1/4 jornada",null,null,null,"1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,"1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/2 jornada","1/2 jornada","1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,"1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,null,"1/2 jornada",null,"1/4 jornada",null,null,null,null,null,"1/2 jornada",null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"3/4 jornada",null,null,null,null,null,null,null,null,null,null,"1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1/2 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,"1/4 jornada","1/4 jornada",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"lugar":["escuela de psicologia (centro de atencion psicologica, cap)","unidad de atencion de la salud","departamento de finanzas y tesoreria","escuela de psicologia (centro de atencion psicologica, cap)","escuela de psicologia (centro de atencion psicologica, cap)","unidad de atencion de la salud","escuela de psicologia (centro de atencion psicologica, cap)","unidad de atencion de salud","unidad de atencion de salud","unidad de atencion de la salud","unidad de atencion de salud","unidad de atencion de salud","escuela de psicologia (centro de atencion psicologica, cap)","unidad de atencion de la salud","unidad de atencion de salud","unidad de atencion de salud","unidad de atencion de salud","escuela de psicologia (centro de atencion psicologica, cap)","unidad de radio-tv,  departamento de comunicaciones","unidad de radio-tv,  departamento de comunicaciones","departamento de comunicaciones","departamento de ingenieria mecanica","unidad de radio-tv, departamento de comunicaciones","unidad de atencion de la salud","departamento de fisica","departamento de finanzas y tesoreria","escuela de psicologia (centro de atencion psicologica, cap)","unidad de promocion de salud","unidad de atencion de salud","escuela de psicologia (centro de atencion psicologica, cap)","sello editorial","unidad de desarrollo de proyectos de tecnologias de la informacion (dti)","unidad de desarrollo de proyectos de tecnologias de la informacion (dti)","unidad de atencion de salud","escuela de psicologia (centro de atencion psicologica, cap)","rectoria y prorrectoria","departamento de desarrollo de personas","departamento de matematicas y cs, de la computacion","unidad de atencion de salud","unidad de desarrollo de proyectos de tecnologias de la informacion","ceus - llanquihue","facultad de quimica y biologia","sello editorial","departamento de fisica","departamento de finanzas y tesoreria","departamento de relaciones internacionales e interuniversitarias","unidad de atencion de salud","departamento de fisica","departamento de fisica","unidad de atencion de la salud","unidad de atencion de salud","escuela de psicologia (centro de atencion psicologica, cap)","departamento de ingenieria mecanica","unidad de registro academico y curricular, seccion control curricular y apoyo informatico","unidad de atencion de salud","departamento de estudios","unidad de gestion del campus","facultad tecnologica","departamento de finanzas y tesoreria","escuela de psicologia (centro de atencion psicologica, cap)","unidad de atencion de salud","vicerrectoria de postgrado ( edificio cepec de apoquindo)","unidad de bibliotecas","departamento de fisica","departamento de finanzas y tesoreria","departamento de ingenieria industrial","departamento de finanzas y tesoreria","departamento de finanzas y tesoreria","departamento de finanzas y tesoreria","comite de etica institucional (cei), vicerrectoria de investigacion, desarrollo e innovacion","departamento de comunicaciones","departamento de ingenieria informatica","unidad de adquisiciones","departamento de publicidad e imagen","escuela de psicologia ( centro de atencion psicologica, cap)","departamento de ingenieria mecanica","departamento de publicidad e imagen","unidad de atencion de salud","escuela de psicologia (centro de atencion psicologica, cap)","escuela de arquitectura","escuela de arquitectura","unidad de promocion de salud","administracion general del fondo solidario de credito universitario","departamento de contabilidad y auditoria","departamento de ingenieria electrica","departamento de relaciones internacionales e interuniversitarias","escuela de psicologia ( centro de atencion psicologica cap)","departamento de finanzas y tesoreria","direccion de asistencia juridica","unidad de atencion de salud","departamento de finanzas y tesoreria","unidad de atencion de salud","vicerrectoria de postgrado (edificio cepec de apoquindo)","escuela de arquitectura","sello editorial","departamento de ingenieria electrica","administracion general del fondo solidario de credito universitario","departamento de finanzas y tesoreria","departamento de finanzas y tesoreria","facultad tecnologica","departamento de calidad y acreditacion","facultad de administracion y economia","departamento de desarrollo de personas","departamento de ingenieria informatica","departamento de desarrollo de personas","direccion de asistencia juridica","dpto, gestion del deporte y cultura","departamento de fisica","departamento de fisica","departamento de fisica","vicerrectoria de postgrado ( edificio cepec de apoquindo)","unidad de innovacion educativa","unidad de gestion del campus","departamento de calidad de vida estudiantil","unidad de atencion de salud","unidad de coordinacion institucional","unidad de coordinacion institucional","unidad de atencion de salud","departamento de ingenieria geografica","departamento de finanzas y tesoreria","departamento de finanzas y tesoreria","centro de estudios en ciencia y tecnologia de alimentos","escuela de obstetricia y puericultura","unidad de registro academico y curricular, seccion control curricular y apoyo informatico","departamento de fisica","facultad de ingenieria","vicerrectoria de postgrado","facultad tecnologica","unidad de atencion de la salud","unidad de gestion del campus","departamento de publicidad e imagen","unidad de atencion de salud","departamento de estudios","unidad de promocion de salud","departamento de ingenieria electrica","vicerrectoria de postgrado","escuela de psicologia (centro de atencion psicologica, cap)","escuela de psicologia","departamento de ingenieria informatica","facultad tecnologica","departamento de finanzas y tesoreria","unidad de bibliotecas","unidad de bibliotecas","unidad de promocion de la salud","facultad de ingenieria","unidad de atencion de salud","departamento de linguistica y literatura","centro de atencion psicologica (cap), escuela de psicologia","departamento de finanzas y tesoreria","departamento de ingenieria electrica","direccion de administracion y finanzas","departamento de relaciones internacionales e interuniversitarias","departamento de ingenieria informartica","departamento de matematicas y cs, de la computacion","departamento de fisica","departamento de fisica","unidad de gestion del campus","comite de etica institucional (cei), vicerrectoria de investigacion, desarrollo e innovacion","departamento de desarrollo de personas","seccion titulos y grados, unidad de registro academico y curricular","departamento de finanzas y tesoreria","departamento de finanzas y tesoreria","unidad de registro academico y curricular, seccion control curricular y apoyo informatico","departamento de finanzas y tesoreria","cecta","facultad tecnologica","unidad de atencion de salud","unidad de gestion del campus","facultad tecnologica","unidad de atencion de salud","unidad de atencion de salud","departamento de matematica y ciencias de la computacion","departamento de comunicaciones","departamento de finanzas y tesoreria","departamento de extension","departamento de ingenieria metalurgica","facultad de quimica y biologia","facultad de quimica y biologia","unidad de atencion de la salud","departamento de ingenieria informatica","unidad de atencion de salud","departamento de publicidad e imagen","depto, de contabilidad y auditoria","unidad de bienestar del personal","departamento de ingenieria informatica","centro de estudios en ciencia y tecnologia de alimentos ( cecta)","vicerrectoria academica","dpto, de finanzas y tesoreria","escuela de psicologia","unidad de bienestar del personal","facultad de ingenieria - oficina de partes e informaciones","facultad de ciencias medicas","unidad de gestion del campus","facultad de ingenieria","escuela de psicologia, facultad de humanidades","unidad de adquisiciones","departamento de comunicaciones","registro academico y curricular, seccion matriculas","departamento de ingenieria electrica","unidad de biblioteca","escuela de arquitectura","departamento de calidad de vida estudiantil","rectoria y prorrectoria","departamento de finanzas y tesoreria","unidad de atencion de salud","vicerrectoria de postgrado ( edificio cepec de apoquindo)","unidad de atencion de salud","departamento de finanzas y tesoreria","facultad de derecho","registro academico y curricular","programa de bachillerato","rectoria","unidad de vocacion artistica","departamento de comunicaciones","vicerrectoria de investigacion, desarrollo e innovacion","unidad de bienestar del personal","direccion de administracion y finanzas","vicerrectoria de postgrado","facultad de quimica y biologia","facultad de quimica y biologia","departamento de ingenieria geografica","escuela de psicologia","unidad de bibliotecas","unidad de promocion de la salud","rectoria","facultad tecnologica","prorrectoria ( casa central)","departamento de ingenieria electrica","departamento de ingenieria electrica","unidad de gestion del campus","departamento de ingenieria electrica","unidad de registro academico y curricular, seccion de control curricular","departamento de matematica y ciencias de la computacion","comite de etica institucional (cei), vicerrectoria de investigacion, desarrollo e innovacion","escuela de medicina","unidad de atencion de salud","departamento de ingenieria informatica","departamento de finanzas y tesoreria","unidad de biblioteca","facultad de quimica y biologia","vicerrectoria academica - pabellon forma","departamento de linguistica y literatura","departamento de recursos humanos","unidad de biblioteca","unidad de vocacion artistica","unidad de gestion del campus","vicerrectoria academica - pabellon forma","vicerrectoria academica - pabellon forma","unidad de promocion de la salud","departamento de comunicaciones","departamento de contabilidad y auditoria","unidad de desarrollo de proyectos de tecnologias de la informacion","registro academico y curricular, seccion titulos y grados","secretaria general","registro academico y curricular, seccion curricular y apoyo informatico","registro academico y curricular","departamento de ingenieria industrial","departamento de biologia","sello editorial","unidad de bibliotecas","unidad de bibliotecas","dpto, finanzas y tesoreria","unidad de atencion de salud","registro academico y curricular","registro academico y curricular, seccion matriculas","unidad de gestion del campus","unidad de bienestar del personal","departamento de finanzas y tesoreria","facultad de quimica y biologia","facultad de humanidades","rectoria","facultad de quimica y biologia","escuela de psicologia, facultad de humanidades","escuela de medicina","unidad de biblioteca","unidad de bibliotecas","departamento de ingenieria informatica","unidad de adquisiciones","facultad de quimica y biologia","unidad de adquisiciones","unidad de adquisiones","unidad de adquisiciones","departamento de gestion del deporte y la cultura","departamento de ciencia y tecnologia de los alimentos","escuela de psicologia","facultad de quimica y biologia","escuela de medicina","unidad de bibliotecas","unidad de bibliotecas","unidad de bienestar del personal","departamento de fisica","departamento de fisica","dpto, de matematica y ciencias de la computacion","facultad tecnologica","vicerrectoria academica - pabellon forma","prorrectoria ( casa central)","unidad de atencion de salud","unidad de remuneraciones , dpto, de recursos humanos","unidad de biblioteca","facultad de quimica y biologia","centro de atencion psicologica (cap), escuela de psicologia","unidad de atencion de la salud","departamento de planificacion presupuestaria","escuela de psicologia, centro de atencion psicologica","departamento de finanzas y tesoreria","unidad de vocacion artistica","departamento de ingenieria informatica","departamento de ingenieria informatica","facultad de ciencias medicas","departamento de finanzas y tesoreria","departamento de recursos humanos","contraloria universitaria, depto, de control de gestion","prorrectoria (casa central)","citecamp","dpto, de recursos humanos","unidad de adquisiciones","departamento de finanzas y tesoreria","fondo solidario de credito universitario","unidad de gestion del campus","unidad de atencion de salud","departamento de filosofia","federacion de estudiantes de la universidad de santiago (feusach)","facultad de quimica y biologia","facultad de quimica y biologia","vicerrectoria de vinculacion con el medio, aula magna","facultad de administracion y economia","departamento de comunicaciones","departamento de ingenieria industrial","facultad de administracion y economia","facultad de administracion y economia","facultad de administracion y economia","departamento de finanzas y tesoreria","departamento de biologia","departamento de ingenieria metalurgica","unidad de gestion del campus","unidad de gestion del campus","unidad de biblioteca","departamento de finanzas y tesoreria","facultad de ingenieria","unidad de bibliotecas","departamento de fisica","unidad de atencion de la salud","unidad de atencion de salud","unidad de vocacion artistica","dpto, tecnologias de gestion","dpto, beneficios estudiantiles","sello editorial","vicerretoria de postgrado","programa de bachillerato","unidad de gestion del campus","facultad de administracion y economia","departamento de planificacion presupuestaria","unidad de atencion de la salud","departamento de ingenieria industrial","unidad de biblioteca","facultad de ingenieria","departamento de comunicaciones","departamento de biologia","departamento de ingenieria metalurgica","facultad de ingenieria","unidad de promocion de salud","facultad tecnologica","escuela de psicologia, centro de atencion psicologica (cap)","unidad de atencion de salud","dpto, beneficios estudiantiles","unidad de administracion de servicios alimentarios","dpto, ingenieria en minas","departamento de investigacion cientifica y tecnologica","unidad de bibliotecas","departamento de ingenieria informatica","ceus - llanquihue","escuela de psicologia, facultad de humanidades","centro de atencion psicologica (cap), escuela de psicologia","departamento de fisica","unidad de administracion de servicios alimentarios","unidad de promocion de la salud","unidad de remuneraciones , dpto, de recursos humanos","departamento de biologia","administracion general del fondo solidario de credito universitario","instituto de estudios avanzados (idea)","unidad de gestion del campus","departamento de recursos humanos","departamento de recursos humanos","direccion juridica","direccion juridica","direccion juridica","direccion juridica","escuela de periodismo","unidad de bienestar, depto, de recursos humanos","unidad de atencion de salud","departamento ingenieria electrica","depto, de ciencia y tecnologia de los alimentos","sello editorial","unidad de atencion de salud","departamento de ciencia y tecnologia de los alimentos","departamento de ingenieria informatica","unidad de bibliotecas","departamento ingenieria electrica","escuela de psicologia, centro de atencion psicologica","departamento de ingenieria informatica","escuela de psicologia, centro de atencion psicologica (cap)","escuela de psicologia, centro de atencion psicologica (cap)","unidad de atencion de salud","instituto de estudios avanzados (idea)","vicerrectoria academica","departamento de ingenieria informatica","unidad funcional de genero, diversidad y equidad","dpto, de recursos humanos","unidad de gestion del campus","dpto, de matematica y ciencias de la computacion","departamento de finanzas y tesoreria","departamento de ingenieria en minas","facultad de administracion y economia","unidad de atencion de la salud","unidad de servicios alimentarios","centro de estudios en ciencia y tecnologia de alimentos ( cecta)","dpto, ingenieria en minas","unidad de atencion de salud","unidad de bienestar, dpto, de recursos humanos","unidad de bibliotecas","unidad de bibliotecas","depto, de calidad y acreditacion","vr, de investigacion , desarrollo e innovacion","vicerrectoria de investigacion, desarrollo e innovacion","unidad de promocion de la salud","unidad de bienestar del personal -  seccion jardin infantil y sala cuna","departamento de ciencia y tecnologia de los alimentos","sello editorial","depto, de ciencia y tecnologia de los alimentos","departamento de recursos humanos","facultad tecnologica","departamento de ciencia y tecnologia de los alimentos","departamento de ingenieria en minas","unidad de atencion de salud","departamento de ingenieria informatica","direccion de genero, diversidad y equidad","departamento ingenieria electrica","departamento ingenieria electrica","dpto, ingenieria en minas","departamento de ingenieria geografica","unidad de atencion de salud","citecamp","unidad de bibliotecas","escuela de psicologia, centro de atencion psicologica (cap)","unidad de atencion de salud","unidad de remuneraciones","departamento de ingenieria electrica","departamento de planificacion presupuestaria","unidad de bibliotecas","departamento de finanzas y tesoreria","departamento de extension","departamento de ingenieria informatica","unidad atencion de la salud","facultad de quimica y biologia","unidad de servicios alimentarios","departamento de ingenieria metalurgica","vicerrectoria de vinculacion con el medio","unidad de atencion de la salud","sello editorial","unidad de promocion de salud","departamento finanzas y tesoreria","facultad de administacion y economia","depto, tecnologias industriales","departamento sello editorial","direccion de programas profesionales, vicerrectoria de postgrado","departamento de gestion estrategica","departamento de gestion estrategica","vicerrectoria del postgrado","prorrectoria","departamento de ingenieria informatica","vicerrectoria academica, edificio apoquindo","vicerrectoria del postgrado","direccion de pregrado","departamento de ingenieria geografica","facultad tecnologica","departamento de desarrollo de personas","departameto de ciencias del ambiente","administracion general del fondo solidario de credito universitario"],"proceso de seleccion":["externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","interno","externo","interno","interno","externo","externo","externo","externo","externo","externo","externo","externo","externo","interno","interno","interno","interno","interno","externo","interno","interno","externo","externo","externo","externo","externo","externo","externo","externo","externo","interno","externo","externo","interno","externo","externo","externo","externo","externo","externo","interno","interno","externo","interno","interno","externo","externo","externo","externo","externo","interno","interno","interno","interno","interno","externo","externo","interno","interno","interno","interno","interno","externo","externo","interno","externo","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","externo","externo","interno","externo","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","externo","interno","externo","externo","externo","interno","interno","interno","interno","externo","interno","externo","interno","externo","interno","interno","interno","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","externo","interno","interno","interno","interno","externo","externo","externo","interno","interno","interno","interno","externo","externo","externo","externo","externo","interno","interno","interno","interno","interno","interno","interno","externo","interno","externo","interno","externo","externo","interno","interno","interno","interno","interno","interno","externo","externo","interno","interno","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","externo","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","externo","externo","externo","interno","interno","interno","interno","interno","externo","externo","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","externo","interno","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno",null,"interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","interno","interno","interno","externo","interno","interno","interno","externo","externo","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","externo","interno","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","externo","externo","interno","interno","interno","externo","interno","interno","externo","externo","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","externo","interno","externo","externo","interno","externo","externo","interno","interno","externo","interno","interno","externo","interno","interno","interno","externo","interno","externo","externo","externo","externo","externo","externo","interno","externo","externo","externo","externo","interno","externo","externo","interno","interno","externo","interno","interno","interno","externo","externo","interno","interno","externo","externo","interno","interno","interno","externo","externo","interno","interno","interno","interno","externo","externo","interno","externo","interno","externo","interno","interno","interno","externo","interno","interno","interno","interno","interno","interno","interno","externo","externo","interno","interno","interno","interno","interno","interno","interno","interno","interno","externo","interno","externo","interno","externo","interno","externo","interno","externo","externo","externo","interno","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","externo","interno","interno","externo","interno","externo","externo","externo","externo","externo","interno"],"fech_in":["del 11 de diciembre","del 07 de octubre","del 12 de marzo","del 02 de noviembre","del 28 de septiembre","del 31 de agosto","del 25 de agosto","del 25 de agosto","del 25 de agosto","del 27 de julio","del 24 de julio del 2020","del 24 de julio del 2020","del 22 de julio","del 01 de julio","del 11 de mayo","del 22 de junio del 2020","del 22 de junio del 2020","del 15 de junio","del 08 de abril","del 08 de abril","del 13 de marzo","del 06 de marzo","del 13 de marzo","del 06 de marzo","del 17 de enero","del 06 de marzo","del 11 de mayo","del 18 de diciembre","del 08 de abril","del 08 de abril","del 12 de marzo","del 28 de febrero del 2020","del 28 de febrero del 2020","del 06 de marzo","del 06 de marzo","del 23 de agosto del 2019","del 29 de noviembre","del 02 de octubre del 2019","del 11 de diciembre","del 27 de junio del 2019","del 25 de marzo","del 17 de enero","del 06 de diciembre","del 22 de noviembre del 2019","del 15 de enero","del 13 de diciembre","del 03 de marzo","del 22 de noviembre del 2019","del 22 de noviembre del 2019","del 17 de enero","del 23 de enero del 2020","del 23 de enero del 2020","del 06 de enero","del 13 de noviembre","del 11 de diciembre","del 06 de noviembre","del 04 de octubre","del 06 de noviembre","del 11 de diciembre","del 23 de diciembre del 2019","del 23 de diciembre del 2019","del 20 de noviembre","del 18 de diciembre","del 22 de noviembre","del 04 de diciembre","del 02 de octubre del 2019","del 14 de noviembre","del 27 de septiembre del 2019","del 27 de septiembre del 2019","del 30 de septiembre del 2019","del 04 de noviembre","del 27 de noviembre del 2019","del 07 de agosto del 2019","del 06 de enero","del 06 de diciembre","del 13 de diciembre","del 06 de noviembre","del 18 de noviembre del 2019","del 04 de noviembre","del 09 de diciembre","del 24 de julio del 2019","del 06 de noviembre","del 04 de diciembre","del 05 de julio del 2019","del 28 de agosto del 2019","del 04 de octubre","del 04 de diciembre","del 11 de octubre","del 25 de noviembre del 2019","del 14 de noviembre","del 14 de noviembre","del 14 de noviembre","del 14 de noviembre","del 29 de noviembre","del 20 de noviembre","del 06 de noviembre","del 18 de noviembre","del 11 de octubre","del 27 de septiembre del 2019","del 23 de septiembre del 2019","del 25 de septiembre del 2019","del 05 de abril del 2019","del 25 de noviembre","del 18 de octubre del 2019","del 14 de noviembre","del 04 de octubre del 2019","del 27 de mayo del 2019","del 08 de noviembre","del 07 de octubre","del 02 de octubre del 2019","del 21 de agosto del 2019","del 08 de noviembre","del 21 de agosto del 2019","del 26 de agosto","del 23 de septiembre del 2019","del 26 de julio del 2019","del 26 de julio del 2019","del 21 de agosto del 2019","del 30 de septiembre del 2019","del 23 de septiembre del 2019","del 04 de octubre del 2019","del 07 de octubre","del 30 de septiembre del 2019","del 27 de septiembre del 2019","del 02 de octubre del 2019","del 10 de enero del 2019","del 12 de agosto del 2019","del 18 de octubre del 2019","del 06 de septiembre del 2019","del 12 de agosto del 2019","del 06 de septiembre del 2019","del 25 de septiembre del 2019","del 18 de octubre","del 16 de octubre","del 16 de octubre","del 17 de julio del 2019","del 11 de octubre","del 07 de agosto del 2019","del 06 de septiembre del 2019","del 25 de septiembre del 2019","del 19 de agosto","del 24 de junio del 2019","del 17 de mayo del 2019","del 05 de agosto del 2019","del 05 de marzo del 2019","del 11 de septiembre","del 31 de julio del 2019","del 22 de mayo","del 23 de septiembre del 2019","del 29 de julio del 2019","del 12 de agosto del 2019","del 21 de agosto del 2019","del 07 de agosto del 2019","del 05 de junio del 2019","del 15 de mayo del 2019","del 15 de mayo del 2019","del 26 de julio","del 19 de julio del 2019","del 06 de septiembre del 2019","del 24 de julio del 2019","del 09 de septiembre del 2019","del 17 de junio del 2019","del 06 de septiembre del 2019","del 23 de agosto del 2019","del 17 de julio del 2019","del 14 de mayo del 2019","del 30 de agosto del 2019","del 30 de agosto del 2019","del 31 de julio del 2019","del 19 de agosto del 2019","del 05 de agosto","del 29 de abril","del 05 de julio del 2019","del 11 de junio del 2019","del 11 de junio del 2019","del 03 de abril del 2019","del 17 de junio del 2019","del 11 de junio del 2019","del 19 de julio del 2019","del 08 de agosto del 2019","del 26 de agosto del 2019","del 02 de agosto","del 09 de julio del 2019","del 21 de junio","del 15 de noviembre","del 12 de octubre","del 24 de octubre","del 25 de octubre","del 10 de diciembre","del 13 marzo del 2019","del 25 de marzo","del 03 de mayo","del 17 de junio del 2019","del 21 de junio","del 11 de junio","del 11 de junio del 2019","del 05 de abril del 2019","del 21 de junio","del 29 de julio del 2019","del 03 de junio del 2019","del 03 de mayo","del 26 de diciembre del 2018","del 12 de agosto","del 22 de julio del 2019","del 31 de julio del 2019","del 27 de junio del 2019","del 19 de julio del 2019","del 05 de julio del 2019","del 05 de junio del 2019","del 21 de junio","del 27 de junio del 2019","del 02 de agosto","del 11 de junio del 2019","del 08 de julio del 2019","del 29 de abril","del 15 de mayo del 2019","del 22 de julio del 2019","del 22 de julio del 2019","del 24 de julio del 2019","del 19 de julio del 2019","del 03 de julio del 2019","del 22 de mayo del 2019","del 03 de junio del 2019","del 08 de julio del 2019","del 12 de junio del 2019","del 23 de abril del 2019","del 13 de mayo","del 16 de abril del 2019","del 16 de abril del 2019","del 21 de junio","del 16 de abril del 2019","del 05 de junio del 2019","del 18 de abril del 2019","del 03 de julio del 2019","del 05 de junio del 2019","del 24 de junio del 2019","del 03 de junio","del 22 de abril del 2019","del 13 de mayo del 2019","del 29 de abril","del 14 de mayo del 2019","del 26 de abril del 2019","del 29 de abril","del 08 mayo del 2019","del 03 de mayo","del 22 de abril","del 26 de abril del 2019","del 26 de abril del 2019","del 24 de junio","del 03 de junio del 2019","del 25 de junio del 2019","del 03 de junio del 2019","del 08 de abril","del 10 de abril","del 10 de abril","del 08 de abril","del 05 abril del 2019","del 03 de abril del 2019","del 11 marzo del 2019","del 11 de junio del 2019","del 17 de mayo del 2019","del 22 de mayo del 2019","del 13 de mayo del 2019","del 10 de abril","del 08 de abril","del 22 de mayo del 2019","del 16 de mayo del 2019","del 05 de junio del 2019","del 22 de mayo del 2019","del 22 de mayo del 2019","del 26 de abril del 2019","del 08 de mayo del 2019","del 21 de diciembre","del 17 de mayo del 2019","del 26 de marzo del 2019","del 17 de mayo del 2019","del 03 de mayo","del 11 marzo del 2019","del 13 marzo del 2019","del 06 marzo del 2019","del 18 de enero del 2019","del 16 de enero del 2019","del 13 de mayo del 2019","del 26 de abril del 2019","del 23 de abril del 2019","del 26 de abril del 2019","del 29 de abril","del 03 de mayo","del 21 de marzo","del 08 de mayo del 2019","del 17 de abril del 2019","del 17 de abril del 2019","del 19 de octubre","del 26 de abril del 2019","del 26 de abril del 2019","del 26 de abril","del 13 de marzo del 2019","del 05 de marzo","del 06 marzo del 2019","del 26 de abril del 2019","del 20 de diciembre del 2018","del 11 de marzo del 2019","del 17 de enero del 2019","del 14 de noviembre","del 25 de marzo","del 10 de diciembre","del 23 de abril del 2019","del 05 de marzo","del 05 de marzo","del 22 de marzo","del 02 de abril","del 12 de abril","del 12 de abril","del 14 de agosto","del 19 de octubre","del 22 de enero del 2019","del 26 de marzo del 2019","del 25 de marzo","del 02 de abril","del 21 de enero","del 10 de enero del 2019","del 20 marzo del 2019","del 14 de enero del 2019","del 17 de enero del 2019","del 10 de enero del 2019","del 09 de enero del 2019","del 05 de marzo del 2019","del 06 marzo del 2019","del 09 de enero del 2019","del 09 de enero del 2019","del 09 de enero del 2019","del 18 de enero","del 05 de marzo del 2019","del 05 de marzo del 2019","del 05 de marzo","del 10 de diciembre","del 14 de enero del 2019","del 18 de enero del 2019","del 05 de noviembre","del 05 de marzo","del 17 de diciembre","del 17 de octubre","del 21 de enero","del 10 de diciembre","del 16 de noviembre","del 10 de octubre","del 20 de noviembre","del 03 de diciembre","del 21 de noviembre","del 19 de octubre","del 17 de octubre","del 10 de agosto","del 15 de enero del 2019","del 15 de enero del 2019","del 14 de enero del 2019","del 10 de enero del 2019","del 10 de enero del 2019","del 10 de enero del 2019","del 10 de enero del 2019","del 10 de enero del 2019","del 26 de noviembre","del 27 de noviembre","del 7 de noviembre","del 28 de noviembre","del 10 de octubre","del 14 de diciembre","del 10 de octubre","del 31 de octubre","del 16 de noviembre","del 14 de noviembre","del 18 de diciembre","del 12 de diciembre","del 10 de diciembre del 2018","del 03 de diciembre","del 28 de noviembre","del 05 de octubre","del 22 de noviembre","del 31 de octubre","del 04 de octubre","del 24 de octubre","del 19 de octubre","del 02 de octubre","del 02 de octubre","del 20 de agosto","del 20 de agosto","del 20 de agosto","del 20 de agosto","del 29 de agosto","del 17 de octubre","del 20 de noviembre","del 31 de agosto","del 02 de octubre","del 17 de octubre","del 25 de octubre","del 26 de septiembre","del 04 de octubre","del 07 de noviembre","del 31 de agosto","del 31 de octubre","del 09 de noviembre","del 29 de octubre","del 13 de agosto","del 10 de octubre","del 01 de octubre","del 06 de septiembre","del 02 de agosto del 2018","del 04 de septiembre","del 10 de octubre","del 12 de septiembre","del 24 de septiembre","del 03 de agosto","del 13 de septiembre","del 12 de septiembre","del 05 de octubre","del 17 de agosto","del 01 de octubre","del 30 de agosto","del 10 de septiembre","del 11 de septiembre","del 14 de agosto","del 08 de agosto","del 25 de julio del 2018","del 25 de julio del 2018","del 02 de agosto","del 01 de octubre","del 27 de julio del 2018","del 05 de septiembre","del 20 de agosto","del 22 de agosto","del 27 de agosto","del 17 de julio del 2018","del 05 de septiembre","del 10 de septiembre","del 25 de julio","del 29 de agosto del 2018","del 27 de agosto","del 22 de agosto","del 22 de agosto","del 10 de agosto","del 20 de junio del 2018","del 22 de junio del 2018","del 08 de agosto","del 08 de agosto","del 08 de agosto","del 28 de junio del 2018","del 22 de junio del 2018","del 29 de junio","del 03 de agosto","del 08 de junio del 2018","del 27 de julio","del 28 de junio del 2018","del 23 de julio del 2018","del 06 de junio del 2018","del 14 de mayo","del 02 de mayo del 2018","del 31 de mayo del 2018","del 10 de mayo","del 24 de abril","del 03 de mayo","del 19 de abril","del 28 de marzo","del 16 de marzo del 2018","del 04 de abril","del 03 de abril","del 28 de marzo","del 28 de marzo","del 28 de marzo","del 04 de abril","del 06 de abril","del 27 de abril del 2018","del 28 de marzo del 2018","del 21 de marzo","del 23 de marzo del 2018","del 06 de marzo del 2018","del 6 de marzo del 2018","del 19 de marzo","del 05 de marzo","del 04 de diciembre"],"fech_ter":["2021-01-11","2020-11-06","2020-03-18","2020-12-02","2020-10-28","2020-09-30","2020-09-25","2020-09-21","2020-09-21","2020-08-27","2020-08-24","2020-08-24","2020-08-22","2020-07-15","2020-06-11","2020-07-22","2020-07-22","2020-07-15","2020-04-15","2020-04-15","2020-03-20","2020-03-13","2020-03-20","2020-04-06","2020-01-24","2020-03-13","2020-06-11","2019-12-26","2020-05-08","2020-05-08","2020-03-18","2020-03-02","2020-03-02","2020-04-06","2020-04-06","2019-08-30","2019-12-04","2019-10-09","2019-12-18","2019-07-05","2019-04-01","2020-01-24","2019-12-13","2019-11-29","2020-01-20","2019-12-20","2020-03-09","2019-11-29","2019-11-29","2020-02-17","2020-03-02","2020-03-02","2020-01-13","2019-11-20","2019-12-15","2019-11-13","2019-10-11","2019-11-13","2019-12-18","2020-01-20","2020-01-20","2019-11-27","2019-12-26","2019-11-29","2019-12-11","2019-10-09","2019-11-21","2019-10-04","2019-10-04","2019-10-07","2019-11-11","2019-12-06","2019-08-14","2020-01-13","2019-12-13","2019-12-20","2019-11-13","2019-12-18","2019-12-04","2019-12-16","2019-08-01","2019-11-13","2019-12-11","2019-07-10","2019-09-04","2019-10-11","2019-12-11","2019-10-18","2019-12-02","2019-11-22","2019-11-21","2019-11-21","2019-11-22","2019-12-04","2019-11-27","2019-11-13","2019-11-25","2019-10-18","2019-10-04","2019-09-30","2019-10-02","2019-04-12","2019-11-27","2019-10-25","2019-11-21","2019-10-11","2019-06-04","2019-11-15","2019-10-14","2019-10-09","2019-08-28","2019-11-15","2019-08-28","2019-09-02","2019-10-23","2019-08-02","2019-08-02","2019-08-23","2019-10-07","2019-09-30","2019-10-11","2019-10-14","2019-10-07","2019-10-04","2019-10-09","2019-01-17","2019-08-21","2019-10-25","2019-09-13","2019-08-21","2019-09-13","2019-10-02","2019-10-25","2019-10-23","2019-10-23","2019-07-24","2019-10-25","2019-08-09","2019-09-25","2019-10-03","2019-08-26","2019-07-01","2019-05-28","2019-08-07","2019-03-12","2019-09-22","2019-08-07","2019-05-29","2019-09-30","2019-08-05","2019-08-21","2019-08-28","2019-08-14","2019-06-12","2019-05-23","2019-05-23","2019-08-02","2019-07-26","2019-09-11","2019-08-01","2019-09-23","2019-06-24","2019-09-13","2019-08-30","2019-07-24","2019-05-23","2019-09-06","2019-09-06","2019-08-07","2019-09-19","2019-08-12","2019-05-09","2019-07-10","2019-06-18","2019-06-18","2019-04-10","2019-06-24","2019-06-20","2019-07-26","2019-08-19","2019-09-02","2019-08-09","2019-07-11","2019-06-28","2018-11-23","2018-10-19","2018-10-30","2018-11-05","2018-12-17","2019-03-20","2019-04-01","2019-05-09","2019-06-24","2019-06-28","2019-06-20","2019-06-20","2019-04-12","2019-06-28","2019-08-05","2019-06-10","2019-05-10","2019-01-02","2019-08-19","2019-07-29","2019-08-07","2019-07-05","2019-08-16","2019-07-12","2019-06-12","2019-06-28","2019-07-05","2019-08-09","2019-06-14","2019-07-10","2019-05-09","2019-05-23","2019-07-29","2019-07-29","2019-08-01","2019-07-26","2019-07-10","2019-05-31","2019-06-10","2019-07-12","2019-06-14","2019-04-30","2019-05-21","2019-04-23","2019-04-23","2019-06-28","2019-04-23","2019-06-12","2019-04-25","2019-07-10","2019-06-07","2019-07-15","2019-06-10","2019-04-29","2019-05-22","2019-05-09","2019-05-23","2019-05-07","2019-05-09","2019-05-15","2019-05-12","2019-04-29","2019-05-03","2019-05-03","2019-07-01","2019-06-10","2019-07-01","2019-06-07","2019-04-15","2019-04-17","2019-04-17","2019-04-15","2019-04-12","2019-04-10","2019-03-18","2019-06-18","2019-05-28","2019-05-31","2019-05-31","2019-04-17","2019-04-15","2019-05-31","2019-05-23","2019-06-12","2019-05-31","2019-05-31","2019-05-07","2019-05-15","2018-01-14","2019-05-28","2019-04-01","2019-05-28","2019-05-09","2019-03-18","2019-03-20","2019-03-14","2019-01-24","2019-01-23","2019-05-22","2019-05-07","2019-04-30","2019-05-03","2019-05-09","2019-05-10","2019-03-28","2019-05-15","2019-04-24","2019-04-24","2018-10-26","2019-05-03","2019-05-03","2019-05-07","2019-04-12","2019-03-10","2019-03-14","2019-05-03","2019-01-14","2019-03-18","2019-01-24","2018-11-26","2019-04-01","2018-12-17","2019-04-30","2019-03-10","2019-03-10","2019-03-28","2019-04-08","2019-04-19","2019-04-19","2018-08-20","2018-10-26","2019-01-25","2019-04-01","2019-04-01","2019-04-04","2019-03-05","2019-01-17","2019-03-27","2019-01-18","2019-01-24","2019-01-17","2019-01-16","2019-03-12","2019-03-14","2019-01-16","2019-01-16","2019-01-16","2019-01-24","2019-03-12","2019-03-12","2019-03-10","2018-12-17","2019-01-18","2019-01-24","2018-11-12","2019-03-10","2018-12-24","2018-10-24","2019-03-05","2018-12-17","2018-11-23","2018-10-17","2018-11-26","2018-12-10","2018-11-28","2018-10-26","2018-10-24","2018-08-16","2019-01-18","2019-01-18","2019-01-18","2019-01-17","2019-01-17","2019-01-17","2019-01-17","2019-01-17","2018-12-03","2018-12-03","2018-11-14","2018-12-28","2018-10-17","2018-12-18","2018-10-17","2018-11-09","2018-11-23","2018-11-21","2018-12-25","2018-12-19","2018-12-17","2018-12-10","2018-12-05","2018-10-12","2018-11-28","2018-11-09","2018-10-11","2018-10-30","2018-10-29","2018-10-08","2018-10-08","2018-08-27","2018-08-27","2018-08-27","2018-08-27","2018-09-05","2018-10-24","2018-11-26","2018-09-07","2018-10-08","2018-10-24","2018-11-09","2018-10-03","2018-10-11","2018-11-14","2018-09-07","2018-11-09","2018-11-13","2018-11-05","2018-08-20","2018-10-24","2018-10-05","2018-09-12","2018-08-11","2018-09-10","2018-10-17","2018-09-26","2018-10-11","2018-08-10","2018-09-21","2018-09-26","2018-10-12","2018-08-24","2018-10-05","2018-09-05","2018-09-26","2018-09-13","2018-08-20","2018-08-13","2018-07-31","2018-07-30","2018-08-08","2018-10-03","2018-08-03","2018-09-12","2018-08-27","2018-08-29","2018-08-31","2018-07-20","2018-09-12","2018-09-12","2018-08-25","2018-09-01","2018-08-31","2018-08-24","2018-08-24","2018-08-16","2018-06-25","2018-06-27","2018-08-13","2018-08-13","2018-08-10","2018-07-04","2018-06-26","2018-07-05","2018-08-09","2018-06-13","2018-08-01","2018-07-02","2018-07-26","2018-06-13","2018-05-16","2018-05-08","2018-06-06","2018-05-17","2018-04-30","2018-05-10","2018-04-24","2018-04-04","2018-03-23","2018-04-11","2018-04-10","2018-04-04","2018-04-06","2018-04-06","2018-04-11","2018-04-11","2018-05-03","2018-04-04","2018-03-26","2018-03-30","2018-03-13","2018-03-13","2018-03-21","2018-03-12","2019-12-11"],"estado":["desierto","desierto","cerrado","desierto","desierto","desierto","desierto","cerrado","cerrado","desierto","desierto","desierto","desierto","desierto","cerrado","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","finalizado","finalizado","desierto","finalizado","desierto","desierto","finalizado","finalizado","finalizado","desierto","desierto","cerrado","cerrado","cerrado","cerrado","cerrado","cerrado","desierto","desierto","desierto","desierto","finalizado","cerrado","finalizado","finalizado","desierto","desierto","desierto","desierto","finalizado","desierto","desierto","finalizado","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","cerrado","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","desierto","desierto","finalizado","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","cerrado","cerrado","desierto","cerrado","desierto","desierto","cerrado","desierto","desierto","desierto","finalizado","desierto","finalizado","desierto","desierto","finalizado","cerrado","cerrado","finalizado","cerrado","finalizado","finalizado","desierto","desierto","finalizado","desierto","desierto","finalizado","desierto","desierto","desierto","finalizado","desierto","finalizado","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","finalizado","desierto","finalizado","finalizado","finalizado","finalizado","desierto","desierto","desierto","desierto","finalizado","finalizado","cerrado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","finalizado","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","finalizado","finalizado","desierto","finalizado","finalizado","finalizado","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","desierto","desierto","desierto","finalizado","desierto","desierto","desierto","desierto","finalizado","desierto","desierto","finalizado","desierto","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","desierto",null,"desierto","desierto","desierto","desierto","desierto","desierto","desierto",null,"desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","cerrado","desierto","desierto","desierto","finalizado","desierto","desierto","desierto","cerrado","finalizado","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","desierto","desierto","desierto","desierto","cerrado","desierto","desierto","desierto","finalizado","finalizado","finalizado","desierto","desierto","desierto","finalizado","finalizado","desierto","finalizado","finalizado","finalizado","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","desierto","desierto","desierto","finalizado","desierto","desierto","finalizado","desierto","finalizado","finalizado","desierto","finalizado","finalizado","finalizado","desierto","finalizado","finalizado","desierto","finalizado","desierto","desierto","desierto","desierto","cerrado","desierto","desierto","desierto","desierto","finalizado","finalizado","desierto","desierto","finalizado","finalizado","finalizado","cerrado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","desierto","finalizado","finalizado","finalizado","desierto","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","finalizado","finalizado","desierto","desierto","finalizado","desierto","desierto","finalizado","desierto","desierto","desierto","desierto","desierto","desierto","desierto","finalizado","finalizado","desierto","desierto","desierto","finalizado","finalizado","desierto","desierto","finalizado","desierto","desierto","desierto","desierto","finalizado","finalizado","finalizado","finalizado","finalizado","desierto","finalizado","desierto","finalizado","desierto","desierto","finalizado","desierto","desierto",null,"desierto","desierto","desierto","desierto","desierto","finalizado","finalizado","desierto","desierto","desierto","finalizado","finalizado","cerrado","desierto","finalizado","desierto","finalizado",null,"finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado","finalizado",null],"sel1":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"6da152259d90288a8a7b8fa00c90722d16980954b91fd08bfbaf31593bbf971f","bcb580f11e6086655ea46dc95cc6976e63b8481cd21924b4bc778a3b3c83a15a","39434460af1231c86ec88e1d89810f934d90699e2f446cb2f8382034c0452d6a","96ea123c444e1294f57ff45d03db6f601de73c9ffae3caf86ba5a8f141cb9516","c51f08c68b8c94dfb3039a7db3148fccfb957dc25bdcf9c0936b695e963f00c0",null,"f983f9bc4bfe8fbba38444b3d7b34ad69efdcfa97f3ae335ae6fefbf41015b9e","887155e95eacca6c66d1038853d6a5a7a010b4320602dddd8908dffccb535730",null,"84bdaf4ac6dde68ae56071a2bb84c98628dd69c31b835de1f3a3bd016c67ab63",null,null,"cf0cac0e9b2a76230dc5b0fec9d65356d1441439922f2dc945848dab518e2359","7f07b61161830a5c1df2533ec1760e89a03eb3e57e9e7662fa0389402c4dc768","c11dc3e565d688370dac07cbc9ee62c1caa5466eeda1a4a0d5d617551d36f6fb",null,null,null,null,null,null,null,null,null,null,null,null,"039ae6bfb1a93cd91d35e1b3dce50f1136b730378717b27ac0a74c380b22178e",null,"c2d3ac68748ba7bdb58bd91c46c78cf0dd2f4b8e6ab907dbed0602ac9a3392c9","1741f4439c49ef599fcf26f91e049b46eeec7b768b462e7142f33afe8e44b21d",null,null,null,null,"d8ab6e5bc4c0b6f3b7f1da3e7e20c978a834d5ae3d25032962cf810b0e137952",null,null,"443b8cef90a74d4b864dee93c21077afc34079c5e606cdf3559838eb67c8c783","f735687c7322fd3df69b5f783268f08e9eed9fc03b1d9ef936e96f299398ed08",null,null,null,null,null,null,null,"c0005b5154b44f8f4836f0cd2fed1a2309e52be425a4cb7e82d80067b4d9f762","9592f48ed6cfbd22a47cd6f07d29f8f145fa0d705238b2de8e47c89a461085d9","75f2ba323bb95efb73f83efa84a706c9c20a5db7aa76ded85f2ec41ef2fc6fa2","99c74ebe252d2a990fd9aa95f2615d29dbd94fb22731f6ba989541587911decf",null,"835dd5927542f81386fd7fb75d501bf25ba70b0977846bad719386d1618176ce","f15340b015e598215daa70c3fc009c14bb84011a53f989b6d4614f28d74d5c7a",null,null,null,null,null,null,null,null,"53b51db77d6d729d93a6512536ad6e6c31e9011f0fad1470a626ee095f78a993",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"b82f735c493d96bb37cc20769e3e29b82965616b0d2a10ebc603b793da7c8a1d","d9f270722e7f1c9171f4049fe4444ea8d2c1e1469f2c21e2ececa4b04d343b0a","fd4917316348bce07aa89e0735035b81e04479e0433fb59a24329eebbf40df77","18e929d28dbf767c9dfe2c1b929d8f38094ac12f334abc4c7103c3dfd5b21aaf",null,null,null,null,null,null,null,null,null,null,"9537db1af2679a2529638c69f42f214f89020812446b8af8d7a72536ab548c4b",null,null,"faf569e25b887ac05597a48bebce8d3dfb814404ad69e1fc975cbc625aae7f76","008b54488b9637eb027e318310348f9716606f28222d788b3bf7863d5d187581",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"c33708c6a8cade277e6c153203b46e7b9c017821477f79cdf371a2503383dc62",null,"665f98ff19e62d966922aa524848a3ff808bed6721400f22fbcacb2c147dc743",null,null,"91daa759a4684aae534b40b15b2ed62ea091aa7d82c1991e27359e77586a1228",null,null,"eceb5caf53753fb1f2867fe520bacb0e1e60a8917e6049a25a639a8d2cd63d46",null,"4395c8b5b23e0d076cec295f1985f69cbb2cc5713172a4a509b53486723a2979","f6ab8602ba3afb21997435f3236ae25579ff03612409087eb568c64fa14572b6",null,null,"41af499e4ebd2962b95ab977e94f2c6fda57d9b39df498d7be8611f3073625fd",null,null,"72af2b8e45e7b7e69ccf0e38133c6cdff75a183551a9769634fe4bf25c1a41a1",null,null,null,"627a33493b7f48c70fa6188a30e6c010adc3eb70099df60b6b312c7f2a0f736f",null,"a982c0bb94fe84d49dc9b65c080e136c749d5a8211679f6403387d45e961fc69","8a0be4014ac9d1e68b3f2b2fc31881c15346a9b62a3c27d594f50bc035c05e76",null,null,null,null,null,null,null,null,null,null,null,"68f9ad77a92b0593ba66a65951f36bfa9297edc06384fffd04fb5816207eb8c6","17f2cb301678b23589e4b8b164417b58fbbef35561775f5fed8fff4af7908365",null,"b0fc1339b44b0edcd0c7be273523f62b98792c90908d05ddf164e8a063bd9828","6c0e5fc0af64eb1c78896969b8360e57f183225e660bdd8245c9719975598d31","49096f3db7b908e25858afd4fc163b29a05f7c1ab5f6c2b4c4119383f0242576","9051f472ddf1e844d4a44172d324e7a2fd8f921c190cdb5ff718f3a864bd6135",null,null,null,null,"84f124d24f9de0e9a8df6d778f561a65bc36a99ac631cfa99383ddac4396d41d","6d5df73e68bb1a49de6031e971bd623691b52e34a492e1f053a57eb4c3ce473f",null,"b3bc5f292b35fc177c5fe85cbf017398ba5a2087a43eeb86d48dd9b915d02ba7","789cb0f11a56dfd01170948ca580337296d9e3872a7896c70fa38c6d788118ad","6b045db426ace8d72163d0670e0591dbfe93354227aa1067f60b3e7b1e6961b6","47c23aa0c24ac5dd2bf754b3d59622eaf2f34db5917e8598977578160660da7b","be946942951e9a21902deacb4581288fe6dc9e0e0a0ca954b2a9094ea45ec785","2f87420fd9f3e5ca3b7d6dfb76090247e1f7e562face48a02a443ab916e5e6d3","6778eaf7e4ab61afd91913e14bc9f200d7d09006d69634fc2b648d034399395a","e85778e9462c4928c90d6a72ff516bd25baece4f162e050e48c51708f7c4ae9c","14e17272890285b075585c4150334e4e709b8d722366be90dcf0d6cf8eb74654","4cc2c04658b25744eb08ec62949aed1b1c3ce690bfeaa69be3d314a865ed215a","a730b133442af055985b20d223b7867189226cfefcedbbf2076c2fa9506ce32f","d6f64770cf4f5890f3c919cacfeb21562af924e1e4460e094a9469bb11f89b36","10b1f19504e7c122b826bbbe15b5a36dd50e73b5a1b7f17b3e55f29794dc5cbf",null,"d9060326cc6d915681503175d9e7ce3f689b3a920094a3b9e08cb475f17965eb","a5d4b8b5005318ae820f6f031ecb991939d428c67a3cb35273ac04402701afe8",null,null,null,null,null,null,null,"fdd77d3d7b16feeba47a891bbbb94a7af423c39a0b0f2b7510deaddf970f6749","23bb4e49f4f41c704b4f88710d2184f8b1cf27c0dc314d75f43d41c05f4f7b27","70e11bd042be338425698cdcb939a5ac3aa1b8b60cde24b980ae5832bad34574",null,"32ae2493d342bf52acc4a733a9b5a4dd6be1d13bbd26522ce05c1a0c59d8d4f2","b57d771cc8ede0be77d58526b8ec3f2a206c19378f0d473f4fbe4a6b67814a3a","1c69df734ae4bb830fab7b785235129efb2b006d7aa86e2241f333e03f4d8a1d","3beee8224ab819e9141d6c0e6358a39725d9ae4de8ed7347275b3f928f1849af",null,null,null,null,null,null,"f0b9831344e939d199a1453f8e27c3a218ec3192597ef171f2409e5eeb848683",null,null,null,"5827815ab89e5bec5ed28ea85856d674ae951548310a5c0d926430fb8e4a2823",null,null,null,null,"605b1efbabd5fc4b55f3bc7b283649e7a26b98dd69e60633d8a63ecf16c68daf",null,null,"15e7d29b2e0bdf1c10be2756b225abcc6154d4f0e84fe96bda5b0850de940973",null,"4a162d291c85b67435fd55eb4825d3e81f4cb94c4a5fbb96db6402bf16d6471c","dbf3389412703746c11799bd110204e44d67c4139be2044130bea784f88684e1","7fdae2fffeba963da6f6369af13b3b2c75e9b8cfdf0999efaef7608c426b4bce","17aef6b12157e21db7e8c1438d97502124174fa5817698b1e2152a90b2a18a5c","5b9a0c2295476704c6d47a2d87c526f9beec3f0284fc5341c6af9a70558a7e73","e07ea07c5cf48181eaabce3bde00f79b6cc88f6e5360064dee812ec9848d181e","6a67eb330d3dc95b0674f58f22d3a1ff99a3bcce7e8b243ab5e9a10047422b80","1c777f32976e4d7915791fbde6b77527721daef54569da3107341b20a66b3542","3f3534e1d53866960691b42d09b106b0bee9be3d0ecb95645333d8cf66c524b5","1803a7d9c5d9b00381c9da64534a99e2a55f27f6dff736f34137fc156d96816a","83eeb4948f9b8829d58a1feea33d8e89c4bcb72632b054187ce9c424a782404b","b1e1b5c1b38251930f82e731a82926831107f9e93e72f1e43ac2390fdf442195",null,null,null,null,"47523e01fcf0a8d0b5f485569d40b34e79827f6384da5e20c13fcad395abac4c","20238a73aaa0846ef61411fb95fb50f73e94f4aeb4ad1fd9fe504317388370f3","e92f679e37eb274230bc2fa7208568cbf8796b79d8845c66822ece74ce67c960","b36caef04aed19293dd57773dbdf14bee6ff2b21189cdba24a88803c4415230b","6b5ad90d1b503d5425dfafc540a16d44e195eff9f91dd897130bc87f9bbfdd6d","372b5dd96e349f6347dbd21e416f81d5f421373db557c41a716525688ac499ba","c6c7ccff6c9aa7362aa96cb3590baf13ab492ce22ac89a26c20006b0b7e2ed1c",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"2d9dfbfc3511e73f07f3d6b576f7a0eed57a0252d87e694e20809e09be754239","ea3fff94655dabce6346b1b763a9414c529eee0e023358f93c59cd145c4363c4","a95ebe865c68a8aad3d506459b23c6027c9fdc6845e779583b081bb1c16e0f98","1e2cc17ef7250434ac7e804b3830805ec023eeb6154d02e9075a59efb132e68e","2998a79a210870946df551f90cc95aeb0d62ac520686ad7c085de7ed9c139b82",null,null,null,null,null,null,null,null,null,null,"f494d96be275d47a6ee1ebe7a5a1e3661c36798af3343f1e53336776d97d87bb",null,null,null,null,"916a303e575e696ce3f36ba897a483ce73b2b3e0baf634a8cf0ea6b56069009a",null,null,null,"8672902081460419032cecd6443596ad6e452534888bf13d45a94ba117c19328","4dfed9d4fd0e9b8f38e6d8b77c5f662bef0cf3c980de33cd072204855f2e3f8c","2bcd808f8acdc0bc86717671444f60c16167da6c70aebe471ebd3ba0f8c69a82","9cd1ce7682150a5e23d9d436902f7bbbc9e9d9ecfed49a4c61cb29cf8f0d0b86",null,null,null,null,null,null,null,null,"3b0f1fee7cc5bbcbce8c62335c376937f40125540ec18d900bc9b2de2889f349","4955bdd3bde1438a86524b24ed75a23f337ba62d2a7239253ef86f82f804cc8d","f996431e9d7495f3cd9ef3610a5686673efee5d4787b23525c77a0dcaf1c8308",null,null,null,"f0c6b00afd9351a77e09b3b77e05e3662a833c15dc0f8a79f76a36216f57dea1","5e098849bdbdb57b341e67be2ef61b81bfca57d6ca5344c2d885027dcc69fb71",null,"9bcebe03ddc113c58f4baac13b9a507a469b0577b671530ff2586cd61a530ce9","82de1778116dbeff5ca68da8a8a94d0f76e635254bdbbca5c9968dd075f750c0","45d4b537fd427eb5376ea6b0fd765388a49b67df1f74167b372e08473e62fdbf",null,null,null,"10bc4fc8339794d2ae7b23ae1bf934894cfd4bb689b0a24056a4a311e52a8f55","29d04263abc50d1243daa8901d5dd3237e3fee05950264385ac27370256d2e87","00fac763a95d5a7f026753d8df2cf4f6572cef1ab79c51f2ab844a79b2b0a770","16e7fbefba7451cdc1d055c32110dc10b6d88506e08d982757aef15598e4fef5",null,null,null,"85b199b720b97599588e77e6ca11dc76791d90280e46b627d6dd453f1998e4cf",null,null,"4f6791a64c7b989516fcd1b4aaedaa898dabdc23aceb2608b89120e4df58615d",null,"c771cc971d7e7dde70838afa7342d4fde39c7906d088aaada5813d60cb4024cd","bd8fa1b064728e9f8c431ea27472ee993cf8fbe819ce46e5804caefee1b14e42",null,"b042c34fa0fcb5724a44474d1abd9d4f0f080c48dfc473482c265951d3f8388b","f79a4fd85c23fd095c1b187b89bfc70a376aa7476f0465fbe6c32101fefd1b18","409f38be39fb0e4a6dfb76e09d2aa263a563654fd91a3a8d3ab24f354b52869e",null,"7dbdd9ca574a09400a2e314c834334cb714d88fad435a43d3cf44d3bb2e539c5","74f116354ce7b343633c7fd5dbc67e6a7e7eaa1e375a97424bda9f54f16a0b53",null,"1a1a396568db674087dcdebba2a67d1db485a8c93c01177e6a1517d9506d11f6",null,null,null,null,null,null,null,null,null,"c337d1ce3fd572a671462d281467a63300dedbace6942d5fd990ca3edaa30348","8ab26aa54ec49fc33090ca6e3990a0a40d4da336c199360bbd0b287b3f299c5c",null,null,"fbcac1176a5277690fa3d4ccebbc72a3cc24a64ac579d91f910b613863712dfb","dca221a578df2ef355eba4b72bacad1854a3491e5fe064e8b2eeccc7def4726b","fb3849ea1eda81a38023f30cd035ee27fb67d082f489ab049b2322f7a10c726c",null,null,null,null,null,null,null,null,"02802ad8222a81a5c471aad1c16eb3c37a52e674133c2d501092f0482af505ce",null,"fa732b8bf3e304f253a49654e0d94a60c38aaee54876c51f4bdce507cc97b739","8fd115de1681b47cc8b6407b9ce69825ff2a7f6f9991cd43ad0705b13253a455","adbbad377aec015070864cea78db8ed5c16aaa38c05e13a268676bc4fdb72b54",null,"5a220f442f8558d1fba58fb698a1ec6002ab0bbc9794bc351bd6bdcac63c372f","9a955fef90f8d65fdb61da0fce5925e579e725d59da3264d8e432a6f42306321","6df02fe2a0193d08088ddacb73b3b50681a276723c5e144f080eb6ce8a748125","276262fb06f1aa9c2f4e9c8f28dc8e6ecac70b02685016ceb2eb730ad9cb3d30","42c3f1daa31eaeb7e6c949f98e05a3a87c3a650e0ece5793afd4d2bd8436598f","324c17ca62d5c05959093c43c554bfe537efbf9325408511bcd007662b1633d6","c2a601c7747d15cf6da7d3d7cf6868826d1c1c090a71d30e3f02b15a61491d9d","8dbab742bd12060554aafd5a0f5350e5eb6ce46fb6820425ae6b48b6ae49f159",null,"6f74fa6571a2689763d10bf7b692eb4c716437774e18514bfa2cf11ae95576bd","eb00738fc03b5288812151913c487afe853ff644ae75e3fb775f5f3522b6705e",null,null,"4a63c0d1312cb4e21d9e80550e7c660adb59cf8db737d62ba4a6a8ab129f69cc",null,null,"f92573bcf1d9f67403d89dee7828f23d505e3c6127505d991de6d9e63a40a749",null,null,null,null,null,null,null,"486accb6e7e063773e61744b131afeea82e179568a07d79495e9c5f04e95b461","bd317e6c407d3dc2f862d3787562ba47d0a80f6e263253fe2e42b061c4563336",null,null,null,"887155e95eacca6c66d1038853d6a5a7a010b4320602dddd8908dffccb535730","21cc24701416456cac2df8dbb016579314b629ddaecb425b1f3cedbda2d6134f",null,null,"d7449f780071fac69e6760820b10195151750e538fde208ff1b219b700427ebe",null,null,null,null,"8ef802f286f99ea518e1d9567385ee9d56def4b61b9c2de447abba68fcd094bf","9d02c06a923f865693fd4310a195820207e289c5b6007e738c0484cfdc9a78b7","0118562cf2fa40ac5850f011d33b26ae6a93463f799f073254f21f48f130fa97","c112ac94c8f7e47cc0787acebf5977b1f9b98ad5dbdfd15222e4e07784246620","4b074aa0e99c42f3fb30e7c9c289fcb64da03e94736120544627a95e0f6e0ba8",null,"7f01e71628595b2536e5c221281a44181afc4c4f65123b41ed362f177b338425",null,"32d1f7944829a1041674af3383e57fc75731a341c75119e257ecba2f163b1d91",null,null,"a16ba1b35910ed9a7c2ad40fde37bb13314760a055f011395ca4bd6b074a5ea0",null,null,null,null,null,null,null,null,"c630b1eb33def5e01b9ed9aa65d6cc4924622fbecc7d95ad2b27d15bc1916b5c","7ac5d7567ffee403541f49f42cf9d04944e5fa8c9a8231721bd20620149b2c02",null,null,null,"e9388a42d034cfa8867c7c94c0a47a05bee858be049f770b5a801789023255b3","490cb4f46c8c1972f18354034250cc3614f34b3738e01dc337d335a2bce70069",null,null,"8093fca44d981f44164c9e2ea45fe6d97253c8a61819d8f52f9a0f9a4bd38369",null,"e7f9a269a01a18f7b2b556328e23549f5f79e112f12df24a5ac6831c2abcab95",null,"f05d7a8f08d6255bb23c4a007eedcc0e0a2c6410555025bc13f991759c7c10cd","7b2db97ad3c7cd956df56a48da7a9ae3d15e8bab6650bb5ff667ec25dd43b472","cf8514ebf282f66106fcc89041f784669a035ced4834194c1bff8f039a98cabe","0123de156fb49386dd41fa11607b88a7c8061934eed0a3104a7c5d4c9608bcce","91e132489120a1e724cb3fbc33b4d4bace3844a84f9cf2811079c61fbeeb90d9","703f7b8a4030a19c72efc1909c5b3ba56723658d04e3a687c4822b9fddc57059","23a9db794b10ba7d727c003c29939fbf0fb7ec1a51c19bd7d8218437f3b437cc","1ffc23a99f23a6cff027915b76d782499e9df02010e2a19a514bc9185469d85b","0f497168a43d9b8d463005114d475ef51aef0484123e752faa51d5c1dcc47fa5","ff0c5f4093c33b31dcc0dae21ba85a5202c26d235afcf91ec0f2ebf621c928d2","bcfe825c6059db239ca1c818933e597c3145a0bec887f20d7c4a5c40d10fed2d","3488eb2a83cd9d98dad769756ffaeea5f6b1a6d3512f2d04d7914de5ad57a000","b5763f6522ee01880a7b18fe1d50ecfda6137cbc1a27da8fada7abcadc2a5e14","17568873d9b1d56b2b1694cfd6db270d3930abeb581adfc0c45323632e9b725b","fb691fa8aaa91c3888149f0f43bcaea08f21b7f7981550bf74540c8e9ec5645b","47a88583cfae9745c804956b62159dea72c58d4048df03d30979876866d20538","68a0399810ffb2a2486467b9d523e3f0c6c1bdf368a0273dcfed753db48ef931","c9ea7b21e82eab46b3d26e088460be6fa33f7e800046be678ed05ed3b20177f9","f613c60c8c027e680a36eda165b5715543b9a2d71b5e1e5e50ce3f53cef22721","0effaa7514c2f60584de010efb04d4d0cb358d14bfaea15bde918953d17b93c1","c31e4052b187ac9029a54e412472887a73df4a0661d57630a355566b04f2981c","e85778e9462c4928c90d6a72ff516bd25baece4f162e050e48c51708f7c4ae9c","2b58272808f605688c3764d188f40ae4d31f2b00c365d99c07bfedb87971f2ed","a982c0bb94fe84d49dc9b65c080e136c749d5a8211679f6403387d45e961fc69","ca432b1b146578d67e0f30f98c8111d4b108827014d8cf5aceb58c02a5b35967",null],"sel2":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"df13b8c7c55ead8e2d681a5ff736e176587e3f387ad6a2e72c6ea264a1373c34",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"750e063c47653bc18347ec810370687962e00767bc02fea66c8ed451fc783b08",null,null,null,null,null,null,"2bc828a91eb1d3ae35084b65d09b9cddc8ac000476e8c8e6a0ce010e5f994f4b",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"8438f5649dfad02be11bc30ff1636522fea58b12698d2fa85ba041e4568aef0d",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"sel3":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"NA":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"1] secretario ( b) de direccion",null,null,null,null,null,"2] mayordomo",null,null,null,null,null,null,null],"vesp":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"grado_n":[6,null,10,6,6,null,6,null,null,null,null,null,6,null,null,null,null,6,13,13,13,17,13,null,10,13,6,13,null,6,10,10,10,null,6,20,10,18,13,17,10,14,10,17,10,13,19,21,20,null,null,6,17,10,19,10,7,20,13,6,null,23,20,10,10,10,14,17,17,10,10,13,14,17,20,17,17,null,6,23,14,13,17,17,23,13,23,13,17,19,13,13,23,23,10,20,17,10,13,17,7,14,10,13,10,17,13,18,21,17,23,20,10,13,null,16,16,19,23,13,14,17,20,10,18,13,23,20,17,20,17,20,10,13,20,21,6,17,13,20,13,20,20,17,20,13,17,6,10,21,20,13,17,18,20,20,17,10,10,17,17,13,10,17,10,20,20,21,17,null,13,14,13,17,17,13,20,23,17,13,23,17,17,17,17,11,23,17,14,13,16,17,17,6,13,13,13,10,23,20,20,13,20,17,19,23,null,13,17,17,10,20,10,10,20,10,20,23,20,21,20,17,21,17,21,17,21,21,17,17,23,13,23,10,17,null,21,13,14,11,21,12,17,14,13,20,21,20,17,13,17,17,17,17,10,14,13,17,20,20,20,17,null,20,13,17,17,13,20,23,21,23,13,17,20,21,21,8,11,14,8,20,13,17,20,20,17,20,23,17,20,20,20,20,21,21,null,17,14,23,6,19,10,10,9,13,21,23,17,13,17,10,21,21,13,17,13,17,20,null,17,23,17,17,20,14,13,13,14,13,13,8,17,13,20,10,20,13,10,23,10,13,null,13,14,13,20,8,17,20,14,10,19,13,14,13,13,17,13,20,13,10,20,null,13,17,17,17,23,23,10,13,6,10,17,13,17,17,10,10,10,17,17,8,8,8,8,21,10,null,17,13,20,null,17,17,23,17,10,23,20,20,null,10,23,17,13,13,20,20,17,13,14,13,17,11,17,null,10,20,20,10,14,17,13,17,17,17,13,17,13,17,13,null,17,13,17,17,17,21,20,21,20,20,17,17,23,10,14,17,20,17,null,14,23,13,14,18,20,13,13,17,20,20,17,10,10,8,10,10,21,10,13,23,21,13,17,17],"cnt_del":[2,2,2,2,2,2,2,2,2,2,3,3,2,2,2,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,2,3,2,2,2,3,2,2,1,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,3,3,2,3,3,2,2,2,2,3,2,2,3,2,2,3,3,2,2,2,3,2,2,2,2,2,2,2,2,2,3,3,3,3,2,3,2,3,3,2,2,3,3,2,3,2,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,2,2,2,3,2,3,3,3,2,3,3,3,3,2,3,2,3,3,3,3,3,3,3,3,2,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,3,3,3,3,2,3,3,3,3,2,3,1,2,2,2,2,2,3,1,2,3,2,2,3,3,2,3,3,2,3,2,3,3,3,3,3,3,2,3,2,3,3,2,3,3,3,3,3,3,3,3,3,3,3,2,3,3,2,3,3,3,3,3,3,2,3,3,2,3,3,2,3,2,2,3,3,2,3,3,3,2,2,2,2,3,3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,2,3,3,3,2,3,3,3,3,3,3,3,3,3,2,2,1,3,3,3,2,3,3,2,3,2,3,3,2,3,3,2,1,2,3,1,2,1,2,2,2,2,2,3,3,1,2,1,3,3,3,3,3,3,3,3,3,3,3,2,3,3,2,2,3,3,1,1,1,2,1,2,1,2,1,1,1,2,2,2,3,3,3,3,3,3,3,3,1,1,2,1,2,1,2,2,1,1,2,2,2,1,1,2,1,2,2,2,2,1,1,2,2,2,2,2,2,1,2,2,2,1,2,2,1,2,2,1,2,2,1,2,2,3,2,2,2,2,1,2,2,2,2,2,2,1,2,2,2,3,3,2,2,3,2,2,2,2,3,2,2,1,3,2,2,2,2,3,3,2,2,2,3,3,1,2,3,1,3,3,2,1,3,3,1,1,1,1,1,2,1,1,1,1,1,1,1,2,2,1,2,2,2,1,1,2],"cnt_de":[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,3,3,2,2,2,2,2,2,2,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,3,2,2,2,2,2,1,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,1,2,3,2,2,2,3,2,2,3,2,3,2,2,2,2,2,2,2,3,2,2,2,1,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,3,3,3,2,2,2,3,2,3,3,3,2,2,2,2,2,2,2,2,2,2,2,3,3,2,3,2,3,2,2,3,3,2,2,3,3,3,2,3,2,2,2,2,3,3,2,2,2,2,2,2,3,2,2,2,3,2,2,3,2,2,3,2,2,3,2,2,2,2,2,2,2,3,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,3,2,2,3,3,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2]},"params":{"rows":["est"],"cols":["estado","lugar"],"aggregatorName":["grado"],"vals":["grado"],"rendererName":["Table"]},"locale":"es","subtotals":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<hr />
+<p>class: center, middle</p>
+<h1 id="muchas-gracias">¡Muchas Gracias!</h1>
+<br>
+<div class="centered">
+Contacto: <a href="andres.gonzalez@umayor.cl">andres.gonzalez@umayor.cl</a>
+</div>
+<br> <br>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="img/DATA-SCIENCE-COLOR-V.png" width="200px" style="display: block; margin: auto;" /></p>
+</div>
+<p><br></p>
+<hr />
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li>Canales, M. (2014). Metodologías de Investigación Social: Introducción a Los Oficios (2° Ed.) (págs. 11-28). Santiago: LOM Ediciones.</li>
+<li>Johnson, R. &amp; Kuby, P. (2008). Estadística Elemental: lo esencial México: Cengage Learning.</li>
+<li>Ritchey, F. (2008). Estadística para las Ciencias Sociales. México: McGrawll Hill.</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
