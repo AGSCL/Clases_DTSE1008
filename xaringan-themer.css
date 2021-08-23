@@ -357,7 +357,11 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 }
 .code_10_pre {
   code-inline-font-size: 60%;
+  overflow-y: scroll !important;
+  overflow-x: scroll !important;
+  max-height: 15vh !important;
   line-height: 0.75em;
+  min-height: 0.5em;
 }
 .code_15 {
   code-inline-font-size: 15%;
