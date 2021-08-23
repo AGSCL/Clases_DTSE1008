@@ -4,7 +4,7 @@
   divHTML.forEach(function (el) {
     var preNodes = el.getElementsByTagName("pre");
     var outputNode = preNodes[0];
-    outputNode.outerHTML = "<details open class='output'><summary>código</summary>" + outputNode.outerHTML + "</details>";
+    outputNode.outerHTML = "<details open class='output'><summary>código</summary>" + outputNode.outerHTML + "]</details>";
   })
 })();
 (function() {
@@ -12,7 +12,7 @@
   divHTML.forEach(function (el) {
     var preNodes = el.getElementsByTagName("pre");
     var outputNode = preNodes[0];
-    outputNode.outerHTML = "<details class='output'><summary>código</summary>" + outputNode.outerHTML + "</details>";
+    outputNode.outerHTML = "<details class='output'><summary>código</summary>" + outputNode.outerHTML + "]</details>";
   })
 })();
 (function() {
@@ -20,7 +20,7 @@
   divHTML.forEach(function (el) {
     var preNodes = el.getElementsByTagName("pre");
     var outputNode = preNodes[1];
-    outputNode.outerHTML = "<details open class='output'><summary>salida</summary>" + outputNode.outerHTML + "</details>";
+    outputNode.outerHTML = "<details open class='output'><summary>salida</summary>" + outputNode.outerHTML + "]</details>";
   })
 })();
 (function() {
@@ -28,7 +28,7 @@
   divHTML.forEach(function (el) {
     var preNodes = el.getElementsByTagName("pre");
     var outputNode = preNodes[1];
-    outputNode.outerHTML = "<details class='output'><summary>salida</summary>" + outputNode.outerHTML + "</details>";
+    outputNode.outerHTML = "<details class='output'><summary>salida</summary>" + outputNode.outerHTML + "]</details>";
   })
 })();
 </script>
