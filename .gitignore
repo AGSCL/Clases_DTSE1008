@@ -10,3 +10,4 @@
 .Rmd
 *.txt
 *.xlsx
+.httr-oauth
