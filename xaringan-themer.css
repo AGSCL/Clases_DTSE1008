@@ -36,7 +36,7 @@
   --code-font-is-google: 1;
   --base-font-size: 20px;
   --text-font-size: 1rem;
-  --code-font-size: 50%;
+  --code-font-size: 90%;
   --code-inline-font-size: 1em;
   --header-h1-font-size: 2.75rem;
   --header-h2-font-size: 2.25rem;
@@ -259,9 +259,6 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 .remark-slide-scaler {
   overflow-y: auto;
 }
-pre {
-  line-height: 0.2em;
-}
 .red {
   color: #A4222B;
 }
@@ -274,6 +271,9 @@ pre {
   height: 50%;
   padding-left: 40%;
 }
+.pull_c_title {
+  height: 90%;
+}
 .pull_l_70 {
   float: left;
   width: 72%;
@@ -282,6 +282,7 @@ pre {
 .pull_r_30 {
   float: right;
   width: 23%;
+  font-size: 90%;
 }
 .pull_left {
   float: left;
@@ -352,18 +353,19 @@ pre {
   font-size: 100%;
 }
 .code_10 {
-  code-inline-font-size: 10%;
+  code-inline-font-size: 60%;
   overflow-y: scroll !important;
   overflow-x: scroll !important;
   max-height: 5vh !important;
   line-height: 0.75em;
 }
 .code_10_pre {
-  code-inline-font-size: 10%;
+  code-inline-font-size: 60%;
   overflow-y: scroll !important;
   overflow-x: scroll !important;
   max-height: 15vh !important;
-  line-height: 0.2em;
+  line-height: 0.75em;
+  min-height: 0.5em;
 }
 .code_15 {
   code-inline-font-size: 15%;
