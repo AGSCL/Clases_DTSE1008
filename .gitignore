@@ -11,3 +11,4 @@
 *.txt
 *.xlsx
 .httr-oauth
+*.RData

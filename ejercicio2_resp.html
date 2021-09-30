@@ -345,7 +345,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Ejercicio</h1>
-<h4 class="date">20 septiembre, 2021</h4>
+<h4 class="date">29 septiembre, 2021</h4>
 
 </div>
 
@@ -405,21 +405,28 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px; text-ali
 <div id="ejercicios" class="section level1">
 <h1>Ejercicios</h1>
 <ul>
-<li>Encuentre la media y la mediana de los siguientes datos: 25, 26, 27, 28, 28, 29, 25, 30, 29</li>
+<li><p>Mire el diagrama de cajas obtenido del recuento de vacunas, particularmente el grupo al que se le administró Pfizer. ¿Está sesgado a la izquierda o a la derecha?</p></li>
+<li><p>¿La distribución es simétrica o sesgada asimétrica?, si está sesgada, ¿lo está de forma positiva o negativa?</p></li>
+<li><p>Calcule los percentiles 43, 62 y 89 del recuento de vacunas para cada grupo. Indíquelos</p></li>
+<li><p>Calcule la diferencia entre el segundo y tercer quintil del recuento de vacunas para cada grupo</p></li>
+<li><p>De la misma base de datos, filtre por aquellos con 30 años y menos y compare el recuento de vacunas aplicadas por fabricante, ¿Qué percentil de Sinovac es más cercano a la mediana de Pfizer?</p></li>
+<li><p>Calcule los percentiles 43, 62 y 89 del recuento de vacunas para cada grupo. Indíquelos</p></li>
 </ul>
 <pre class="r"><code>mean(c(25, 26, 27, 28, 28, 29, 25, 30, 29))</code></pre>
 <pre><code>## [1] 27.44444</code></pre>
 <pre class="r"><code>quantile(c(25, 26, 27, 28, 28, 29, 25, 30, 29),.5)</code></pre>
 <pre><code>## 50% 
 ##  28</code></pre>
+<p><br></p>
 <ul>
-<li>En la clase se midió el grupo de sangre de 30 estudiantes de una clase como sigue: B, A, O, B, A, O, O, A, AB, O, A, A, B, O, O, AB, O, A, O, A, O, O, AB, B, A, O, B, A, B, O, B, A, O, B, A, B. Represente estos datos como una tabla de frecuencias</li>
+<li>Calcule la diferencia entre el segundo y tercer quintil del recuento de vacunas para cada grupo</li>
 </ul>
 <pre class="r"><code>table&lt;-c(&quot;B&quot;, &quot;A&quot;, &quot;O&quot;, &quot;B&quot;, &quot;A&quot;, &quot;O&quot;, &quot;O&quot;, &quot;A&quot;, &quot;AB&quot;, &quot;O&quot;, &quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;O&quot;, &quot;O&quot;, &quot;AB&quot;, &quot;O&quot;, &quot;A&quot;, &quot;O&quot;, &quot;A&quot;, &quot;O&quot;, &quot;O&quot;, &quot;AB&quot;, &quot;B&quot;, &quot;A&quot;, &quot;O&quot;, &quot;B&quot;, &quot;A&quot;, &quot;B&quot;, &quot;O&quot;, &quot;B&quot;, &quot;A&quot;, &quot;O&quot;, &quot;B&quot;, &quot;A&quot;, &quot;B&quot;)
 table(table)</code></pre>
 <pre><code>## table
 ##  A AB  B  O 
 ## 11  3  9 13</code></pre>
+<p><br></p>
 <ul>
 <li>¿Cuál(es) es(son) la(s) menos frecuente(s)?, ¿cuál es la moda?</li>
 </ul>
@@ -468,12 +475,14 @@ Anti_Moda(na.omit(table))</code></pre>
 <pre><code>## [1] &quot;C:/Users/andre/Documents/R/win-library/4.1&quot;</code></pre>
 <pre class="r"><code>rstudioapi::getSourceEditorContext()</code></pre>
 <pre><code>## Document Context: 
-## - id:        &#39;652C1115&#39;
+## - id:        &#39;74557FCC&#39;
 ## - path:      &#39;H:/Mi unidad/_clases_umayor/ejercicio2_resp.Rmd&#39;
-## - contents:  &lt;201 rows&gt;
+## - contents:  &lt;218 rows&gt;
 ## Document Selection:
-## - [156, 26] -- [156, 26]: &#39;&#39;</code></pre>
-<pre class="r"><code>sessionInfo()</code></pre>
+## - [205, 1] -- [205, 1]: &#39;&#39;</code></pre>
+<pre class="r"><code>save.image(&quot;ej2_resp.RData&quot;)
+
+sessionInfo()</code></pre>
 <pre><code>## R version 4.1.1 (2021-08-10)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows 10 x64 (build 19042)
