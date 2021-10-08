@@ -273,42 +273,14 @@ $(document).ready(function () {
 <h2>Grupo 1</h2>
 <p>La base de datos a utilizar para su grupo es la siguiente:</p>
 <pre class="r"><code>#Cargamos los paquetes estadísticos. Si no existen en su computador, los instala
-if(!require(dplyr)){install.packages(&quot;dplyr&quot;)}</code></pre>
-<pre><code>## Loading required package: dplyr</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code>if(!require(readr)){install.packages(&quot;readr&quot;)}</code></pre>
-<pre><code>## Loading required package: readr</code></pre>
-<pre class="r"><code>if(!require(knitr)){install.packages(&quot;knitr&quot;)}</code></pre>
-<pre><code>## Loading required package: knitr</code></pre>
-<pre class="r"><code>if(!require(kableExtra)){install.packages(&quot;kableExtra&quot;)}</code></pre>
-<pre><code>## Loading required package: kableExtra</code></pre>
-<pre><code>## 
-## Attaching package: &#39;kableExtra&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
-## 
-##     group_rows</code></pre>
-<pre class="r"><code>if(!require(data.table)){install.packages(&quot;data.table&quot;)}</code></pre>
-<pre><code>## Loading required package: data.table</code></pre>
-<pre><code>## 
-## Attaching package: &#39;data.table&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
-## 
-##     between, first, last</code></pre>
-<pre class="r"><code>if(!require(highcharter)){install.packages(&quot;highcharter&quot;)}</code></pre>
-<pre><code>## Loading required package: highcharter</code></pre>
-<pre><code>## Registered S3 method overwritten by &#39;quantmod&#39;:
-##   method            from
-##   as.zoo.data.frame zoo</code></pre>
-<pre><code>## Highcharts (www.highcharts.com) is a Highsoft software product which is</code></pre>
-<pre><code>## not free for commercial and Governmental use</code></pre>
-<pre class="r"><code>#Primer grupo: Pablo y Jessica
+if(!require(dplyr)){install.packages(&quot;dplyr&quot;)}
+if(!require(readr)){install.packages(&quot;readr&quot;)}
+if(!require(knitr)){install.packages(&quot;knitr&quot;)}
+if(!require(kableExtra)){install.packages(&quot;kableExtra&quot;)}
+if(!require(data.table)){install.packages(&quot;data.table&quot;)}
+if(!require(highcharter)){install.packages(&quot;highcharter&quot;)}
+
+#Primer grupo: Pablo y Jessica
 dp76_1&lt;- readr::read_csv(&quot;https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/master/output/producto76/fabricante_std.csv&quot;) %&gt;% 
   #Sólo seleccionaremos las segundas dosis
   dplyr::filter(Dosis==&quot;Segunda&quot;) %&gt;% 
@@ -320,15 +292,6 @@ dp76_1&lt;- readr::read_csv(&quot;https://raw.githubusercontent.com/MinCiencia/D
   dplyr::filter(Fabricante!=&quot;Total&quot;) %&gt;% 
   #Seleccionamos datos hasta el 02 de Octubre de 2021
   dplyr::filter(Fecha&lt;=&quot;2021-10-02&quot;)</code></pre>
-<pre><code>## Rows: 2840 Columns: 4</code></pre>
-<pre><code>## -- Column specification --------------------------------------------------------
-## Delimiter: &quot;,&quot;
-## chr  (2): Fabricante, Dosis
-## dbl  (1): Cantidad
-## date (1): Fecha</code></pre>
-<pre><code>## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 <div id="grupo-2" class="section level2">
 <h2>Grupo 2</h2>
