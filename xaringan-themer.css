@@ -412,6 +412,28 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 .line_space_05 {
   line-height: 0.5em;;
 }
+.largest {
+  font-size: 2.488em;;
+}
+.larger {
+  font-size: 2.074em;;
+}
+.large {
+  font-size: 1.44em;;
+}
+.small {
+  font-size: 0.833em;;
+}
+.smaller {
+  font-size: 0.694em;;
+}
+.smallest {
+  font-size: 0.579em;;
+}
+.limity150 {
+  max-height: 150px;;
+  overflow-y: auto;;
+}
 .tiny_text {
   font-family: Arial Narrow;
   font-size: 70%;
