@@ -409,7 +409,13 @@ guaguas %&gt;%
   #Generamos un recuento de cada nombre por sexo y por grupo de años a los que corresponde
   #(antes o después de la vuelta a la democracia)
     dplyr::summarise(n=mean(n,na.rm=T),proporcion=mean(proporcion,na.rm=T)) %&gt;% 
-    dplyr::ungroup()
+    dplyr::ungroup() 
+    
+#Semilla para números aleatorios
+set.seed(999)
+#Una valoración promedio de los nombres
+guagua_rec$valoracion&lt;-
+  sample(1:10, nrow(guagua_rec), replace=T)
 
 # anio  = año de inscripción
 # nombre    = el nombre inscrito
@@ -417,7 +423,7 @@ guaguas %&gt;%
 # n = número de ocurrencias del nombre
 # proporcion    = proporción del nombre respecto del total de inscripciones del año</code></pre>
 <p><br></p>
-<p>Recodificamos la base de datos <code>guaguas</code> en <code>guagua_rec</code>, agegando la variable <code>anio_ext</code> que representa el periodo disponible de nacimientos desde 1920 hasta 1989, por un lado, y 1990 a 2020, por otro. Las variables <code>n</code> y <code>proporcion</code> representan la cantidad de guaguas que han nacido con ese sexo en cada uno de los 2 periodos definidos, y la proporción que representa ese recuento.</p>
+<p>Recodificamos la base de datos <code>guaguas</code> en <code>guagua_rec</code>, agegando la variable <code>anio_ext</code> que representa el periodo disponible de nacimientos desde 1920 hasta 1989, por un lado, y 1990 a 2020, por otro. Las variables <code>n</code> y <code>proporcion</code> representan la cantidad de guaguas que han nacido para cada nombre, con un respectivo sexo en cada uno de los 2 periodos definidos, y la proporción que representa ese recuento. De igual forma, se generó aleatoriamente y con una semilla de número 999, una valoración promedio del nombre por parte de la comunidad, en los distintos periodos definidos (<code>valoracion</code>). En la información del paquete encontrará información sobre el resto de las columnas.</p>
 <p><br></p>
 <pre class="r"><code>if(!require(readxl)){install.packages(&quot;readxl&quot;)}
 if(!require(dplyr)){install.packages(&quot;dplyr&quot;)}
@@ -444,7 +450,7 @@ cbind.data.frame(region=&quot;n&quot;,n_america)
   # Se recodifican las 3 regiones en Sur versus a Central o Norte
   dplyr::mutate(south=factor(ifelse(region==&quot;s&quot;,1,0),labels=c(&quot;Central/Norte&quot;,&quot;Sur&quot;)))</code></pre>
 <p><br></p>
-<p>Recodificamos la base de datos de prisiones, selecionando información de países del continente Americano. Luego, recodificamos los datos sobre población femenina en países con altos (arriba o igual a la mediana) y bajos porcentajes (debajo de la mediana) (<code>hi_fem_pris</code>). Asimismo, se añade la variable <code>south</code> que separa entre los países de Sudamérica y los de América Central y Norte.</p>
+<p>Recodificamos la base de datos de prisiones, selecionando información de países del continente Americano. Luego, recodificamos los datos sobre población femenina en países con altos (arriba o igual a la mediana) y bajos porcentajes (debajo de la mediana) (<code>hi_fem_pris</code>). Asimismo, se añade la variable <code>south</code> que separa entre los países de Sudamérica y los de América Central y Norte.En la descrición del paquete podrá encontrar la información sobre el resto de las columnas.</p>
 <p><br></p>
 <div class="warning" style="padding:0.1em; background-color:#acdce3; color:#12636B">
 <span>
