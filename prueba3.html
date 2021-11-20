@@ -452,7 +452,7 @@ cbind.data.frame(region=&quot;n&quot;,n_america)
 <b>INSTRUCCIONES DE LA PRUEBA</b>
 </p>
 <p style="margin-left:1em;">
-<p>Formule una pregunta de investigación para el vínculo entre dos variables de naturaleza categórica (a), dos variables de naturaleza continua (b) y una variable de naturaleza categórica binaria y otra continua (c).<br><br> - Escriba una descripción de los datos (por ej., medidas de tendencia central y posición) en función de la pregunta de investigación <br> - Genere un gráfico respecto a dicho vínculo<br> - Haga la prueba de hipótesis que corresponda de acuerdo a los datos, la pregunta y su naturaleza<br> - Mencione los supuestos de la prueba utilizada y si se cumplen o no. Genere medidas de sensibilidad en caso de incumplimiento y complemente la interpretación de sus hallazgos.<br><br></p>
+<p>Formule una pregunta de investigación para el vínculo entre dos variables de naturaleza categórica (a), dos variables de naturaleza continua (b) y una variable de naturaleza categórica binaria y otra continua (c). Luego, para dar respuesta a las preguntas planteadas:<br><br> - Escriba una descripción de los datos (por ej., medidas de tendencia central y posición, tabla de contingencia, porcentajes, etc.) en función de la pregunta de investigación <br> - Genere un gráfico respecto a dicho vínculo<br> - Haga la prueba de hipótesis que corresponda de acuerdo a los datos, la pregunta y su naturaleza<br> - Mencione los supuestos de la prueba utilizada y si se cumplen o no. Indique medidas de sensibilidad en caso de incumplimiento y complemente la interpretación de sus hallazgos.<br><br></p>
 <p>El grupo de Lucas y Jessica trabajará con la base <b>“america_prison”</b>; Al grupo de Ismael, Ignacio y Pablo les tocará trabajar con la base de <b>“guagua_rec”</b></p>
 </p>
 <p>No tenga miedo a consultar al profesor. Recuerde que en esta prueba se juega su nota.</p>
@@ -460,6 +460,59 @@ cbind.data.frame(region=&quot;n&quot;,n_america)
 </div>
 <p><br></p>
 <p><br></p>
+<p>La rúbrica de evaluación es la siguiente:</p>
+<pre class="r"><code>library(readxl)
+rubrica &lt;- read_excel(&quot;rubrica.xlsx&quot;)
+
+rubrica %&gt;%  knitr::kable(format=&quot;markdown&quot;)</code></pre>
+<table>
+<colgroup>
+<col width="4%" />
+<col width="3%" />
+<col width="26%" />
+<col width="28%" />
+<col width="37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">…1</th>
+<th align="left">Criterios</th>
+<th align="left">Principiante</th>
+<th align="left">Competente</th>
+<th align="left">Muy competente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Resolución de problemas</td>
+<td align="left">Ponderación 40,00%</td>
+<td align="left">0% No logra responder la pregunta</td>
+<td align="left">50% Logra responder la pregunta parcialmente, aunque denota una aplicación de conocimientos adquiridos en clase y las lecturas obligatorias</td>
+<td align="left">100% Logra responder a la pregunta de manera suficientemente satisfactoria</td>
+</tr>
+<tr class="even">
+<td align="left">Capacidad analítica</td>
+<td align="left">Ponderación 40,00%</td>
+<td align="left">0% No logra identificar aquellos pasos, procedimientos y conocimientos que se requieren desplegar para dar respuesta a la pregunta</td>
+<td align="left">50% Logra identificar parcialmente los elementos requeridos para dar respuesta a la pregunta, desplegándolos en el ejercicio</td>
+<td align="left">100% Logra identificar y dar cuenta de los elementos requeridos para dar respuesta a la pregunta</td>
+</tr>
+<tr class="odd">
+<td align="left">Gramática</td>
+<td align="left">Ponderación 10,00%</td>
+<td align="left">0% La interpretación es ilegible, las ideas se encuentran desordenadas y no permiten extraer los argumentos centrales de la respuesta al ejercicio</td>
+<td align="left">50% Hay un hilo conector en las ideas y se encuentran ordenadas</td>
+<td align="left">100% Además de la adecuada ilación y el orden de las ideas, se entiende la relación entre los argumentos y las conclusiones</td>
+</tr>
+<tr class="even">
+<td align="left">Dar formato</td>
+<td align="left">Ponderación 10,00%</td>
+<td align="left">0% Los elementos se encuentran desordenados, siendo difícil identificar los ejercicios y pasos seguidos para dar respuesta a las preguntas</td>
+<td align="left">50% Si bien se pueden colegir los pasos seguidos y procedimientos aplicados, parecen haber algunos elementos omitidos que dificultan su adecuada reproducción</td>
+<td align="left">100% Ordena adecuadamente los pasos y procedimientos seguidos, asigna mayor relevancia a aquellos elementos que son más determinantes para dar respuesta a la pregunta y genera una respuesta 100% reproducible</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="fuentes" class="section level1">
 <h1>Fuentes</h1>
@@ -513,21 +566,22 @@ sessionInfo()</code></pre>
 ## [34] systemfonts_1.0.2       digest_0.6.27           foreign_0.8-81         
 ## [37] rmarkdown_2.10          svglite_2.0.0           base64enc_0.1-3        
 ## [40] jpeg_0.1-9              pkgconfig_2.0.3         htmltools_0.5.2        
-## [43] dbplyr_2.1.1            fastmap_1.1.0           htmlwidgets_1.5.3      
-## [46] rlang_0.4.11            rstudioapi_0.13         jquerylib_0.1.4        
-## [49] generics_0.1.0          jsonlite_1.7.2          magrittr_2.0.1         
-## [52] Matrix_1.3-4            Rcpp_1.0.7              munsell_0.5.0          
-## [55] fansi_0.5.0             lifecycle_1.0.0         stringi_1.7.4          
-## [58] yaml_2.2.1              passport_0.3.0          grid_4.1.1             
-## [61] crayon_1.4.1            haven_2.4.3             splines_4.1.1          
-## [64] hms_1.1.0               pillar_1.6.2            codetools_0.2-18       
-## [67] reprex_2.0.1            glue_1.4.2              evaluate_0.14          
-## [70] latticeExtra_0.6-29     modelr_0.1.8            selectr_0.4-2          
-## [73] png_0.1-7               vctrs_0.3.8             tzdb_0.1.2             
-## [76] cellranger_1.1.0        gtable_0.3.0            assertthat_0.2.1       
-## [79] xfun_0.25               broom_0.7.9             rnaturalearth_0.1.0    
-## [82] e1071_1.7-8             class_7.3-19            viridisLite_0.4.0      
-## [85] units_0.7-2             cluster_2.1.2           ellipsis_0.3.2</code></pre>
+## [43] highr_0.9               dbplyr_2.1.1            fastmap_1.1.0          
+## [46] htmlwidgets_1.5.3       rlang_0.4.11            rstudioapi_0.13        
+## [49] jquerylib_0.1.4         generics_0.1.0          jsonlite_1.7.2         
+## [52] magrittr_2.0.1          Matrix_1.3-4            Rcpp_1.0.7             
+## [55] munsell_0.5.0           fansi_0.5.0             lifecycle_1.0.0        
+## [58] stringi_1.7.4           yaml_2.2.1              passport_0.3.0         
+## [61] grid_4.1.1              crayon_1.4.1            haven_2.4.3            
+## [64] splines_4.1.1           hms_1.1.0               pillar_1.6.2           
+## [67] codetools_0.2-18        reprex_2.0.1            glue_1.4.2             
+## [70] evaluate_0.14           latticeExtra_0.6-29     modelr_0.1.8           
+## [73] selectr_0.4-2           png_0.1-7               vctrs_0.3.8            
+## [76] tzdb_0.1.2              cellranger_1.1.0        gtable_0.3.0           
+## [79] assertthat_0.2.1        xfun_0.25               broom_0.7.9            
+## [82] rnaturalearth_0.1.0     e1071_1.7-8             class_7.3-19           
+## [85] viridisLite_0.4.0       units_0.7-2             cluster_2.1.2          
+## [88] ellipsis_0.3.2</code></pre>
 </div>
 
 
