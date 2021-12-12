@@ -377,79 +377,16 @@ ICVU &lt;- readr::read_csv(&quot;https://docs.google.com/spreadsheets/d/15cqhXob
                                             T~nivel_2011)) %&gt;% 
   dplyr::mutate_at(vars(contains(&quot;nivel&quot;)),funs(&quot;rec&quot;=factor(ifelse(.==&quot;Promedio&quot;,&quot;Bajo&quot;,.), levels=c(&quot;Bajo&quot;, &quot;Alto&quot;),labels=c(&quot;Bajo/Promedio&quot;,&quot;Alto&quot;)))) %&gt;% 
   dplyr::mutate_at(vars(paste0(&quot;nivel_20&quot;,c(11,20,18,19))),funs(factor(., levels=c(&quot;Bajo&quot;, &quot;Promedio&quot;, &quot;Alto&quot;))))</code></pre>
-<pre class="r"><code>invisible(&quot;a&quot;)
-# Formule una pregunta de investigación para el vínculo entre dos variables de naturaleza categórica (a), dos variables de naturaleza continua (b) y una variable de naturaleza categórica binaria y otra continua (c). Luego, para dar respuesta a las preguntas planteadas:&lt;br&gt;&lt;br&gt;
-#   - Escriba una descripción de los datos (por ej., medidas de tendencia central y posición, tabla de contingencia, porcentajes, etc.) en función de la pregunta de investigación &lt;br&gt;
-#   - Genere un gráfico respecto a dicho vínculo&lt;br&gt;
-#   - Haga la prueba de hipótesis que corresponda de acuerdo a los datos, la pregunta y su naturaleza&lt;br&gt;
-#   - Mencione los supuestos de la prueba utilizada y si se cumplen o no. Indique medidas de sensibilidad en caso de incumplimiento y complemente la interpretación de sus hallazgos.
-#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_
-#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_
-cat(&quot;Pregunta: ¿Existe asociación entre los niveles de Calidad de Vida Urbana que obtuvieron las comunas de la RM el 2011 y el 2020?&quot;)
-
-cat(&quot;Exploramos los datos&quot;)
-psych::describe(ICVU[,c(&quot;nivel_2011&quot;,&quot;nivel_2020&quot;)])
-psych::describeBy(ICVU$nivel_2020,group=ICVU$nivel_2011)
-
-cat(&quot;Recuento de datos por categoría&quot;)
-table(ICVU$nivel_2020,ICVU$nivel_2011)
-
-cat(&quot;Tabla de porcentajes por columna&quot;)
-round(prop.table(table(ICVU$nivel_2020, ICVU$nivel_2011),2)*100,1)
-
-cat(&quot;Gráfico&quot;)
-mosaicplot(nivel_2020~nivel_2011, data = ICVU, main= &quot;Gráfico de mosaico&quot;,  ylab=&quot;Nivel en el año 2020&quot;, xlab=&quot;Nivel en el año 2011&quot;, col= c(&quot;#69b3a2&quot;, &quot;#3C3C3B&quot;, &quot;#FEDA3F&quot;))
-
-cat(&quot;Prueba de hipótesis&quot;)
-chi2&lt;-
-chisq.test(table(ICVU$nivel_2020, ICVU$nivel_2011))
-chi2
-
-cat(paste0(&quot;se constata una asociación entre el nivel de calidad de vida urbana obtenido el 2011 y el nivel obtenido el 2020 chi2(&quot;,as.numeric(chi2$parameter),&quot;)=&quot;,round(as.numeric(chi2$statistic),2),&quot;, p&quot;,ifelse(as.numeric(chi2$p.value)&lt;.001,&quot;&lt;0,001&quot;,ifelse(as.numeric(chi2$p.value)&lt;.01,&quot;&lt;0,01&quot;,ifelse(as.numeric(chi2$p.value)&lt;.05,&quot;&lt;0,05&quot;,paste0(&quot;=&quot;,round(chi2$p.value,2)))))))
-
-cat(&quot;En caso de que el valor esperado sea menor a 5 para algunas de las celdas o intersecciones, se debe utilizar la prueba exacta de Fisher u obtener valores por simulación. Este es el caso.&quot;)</code></pre>
-<pre class="r"><code>invisible(&quot;b&quot;)
-cat(&quot;Pregunta: ¿Existe una relación entre el puntaje del índice de calidad de vida urbana en 2018 y la población medida en 2017&quot;)
-
-#Eliminamos perdidos o NA&#39;s
-ICVU_sel&lt;-
-na.omit(ICVU[,c(&quot;icvu_2018&quot;,&quot;poblacion&quot;)])
-
-print(&quot;Exploramos los datos  (con los datos completos)&quot;)
-psych::describe(ICVU_sel)
-
-cat(&quot;Gráfico  (con los datos completos)&quot;)
-plot(icvu_2018~poblacion, 
-     data = ICVU_sel, 
-     main= &quot;Diagrama de puntos&quot;,  ylab=&quot;Puntaje de Calidad de Vida Urbana 2018&quot;, xlab=&quot;Población&quot;)
-
-cat(&quot;Prueba de hipótesis (con los datos completos)&quot;)
-cor_icvu&lt;-
-cor.test(ICVU_sel$icvu_2018,ICVU_sel$poblacion)
-cor.test(ICVU_sel$icvu_2018,ICVU_sel$poblacion)
-
-cat(paste0(&quot;se constata una relación nula entre el puntaje de Calidad de Vida Urbana obtenido el 2018 y la población medida en 2017 r=&quot;,round(as.numeric(cor_icvu$estimate),2),&quot;,  p&quot;,ifelse(as.numeric(cor_icvu$p.value)&lt;.001,&quot;&lt;0,001&quot;,ifelse(as.numeric(cor_icvu$p.value)&lt;.01,&quot;&lt;0,01&quot;,ifelse(as.numeric(cor_icvu$p.value)&lt;.05,&quot;&lt;0,05&quot;,paste0(&quot;=&quot;,round(cor_icvu$p.value,2)))))))
-
-cat(&quot;Supuestos y qué haría para remediarlos. Uno de los supuestos es la normalidad multivariada, en que ambas medidas deben tener una distribución normal, debiendo recurrir a una prueba de normalidad; También, que la relación sea lineal y no polinómica (ej., curvas con nódulos en medio o exponencial o logarítmica); varianza constante u homoscedasticidad, lo que se puede medir con un test de filgner; que no existan outliers (o datos anormales; se puede ver con la función scale, viendo aquellos valores mayores a abs(3,29). Si no se cumple la normalidad o la varianza constante, se puede utilizar un test no paramétrico como correlaciones policóricas o una correlación Spearman o kendall-tau&quot;)</code></pre>
-<pre class="r"><code>invisible(&quot;c&quot;)
-
-cat(&quot;¿La población variará en función del Nivel de calidad de vida urbana dicotomizado al 2020&quot;)
-cat(&quot;Describa los datos por grupos&quot;)
-psych::describeBy(ICVU$poblacion, group= ICVU$nivel_2020_rec, mat=T)
-
-cat(&quot;Apoyo gráfico&quot;)
-boxplot(ICVU$poblacion ~ ICVU$nivel_2020_rec,
-        col = c(&quot;#69b3a2&quot;, &quot;#878787&quot;),ylab= &quot;Población al 2017&quot;, xlab=&quot;Nivel Dicotomizado&quot;,
-        main=&quot;Gráfico de cajas&quot;)
-
-cat(&quot;Prueba de hipótesis&quot;)
-t.test(poblacion~nivel_2020_rec, ICVU)
-cat(&quot;Supuestos y qué haría para remediarlos. Se asume una varianza similar en ambos grupos. De tenerlo, debe utilizarse la corrección de Welch para varianzas desiguales. No deben existir muchos outliers y los datos deben distribuirse normalmente. De violarse tales supuestos, se deberá utilizar el test de Wilcoxon que no requiere el supuesto paramétrico de normalidad y al estimar pseudomedianas por el orden de los daos o de acuerdo a su posición, no es tan sensible a outliers&quot;)
-
-# - Hipótesis: la prueba t compara medias, mientras que la Wilcoxon compara el orden de los datos o su posición
-# - Esta última sirve cuando los datos no se distribuyen normalmente o tiene muchos outliers
-# - El test de wilcoxon genera una pseudomediana
-# Cuando las muestras son pequeñas, se recomienda el Wilcoxon, ya que el supuesto paramétrico de normalidad no se cumple</code></pre>
+<div id="primer-ejercicio" class="section level2">
+<h2>Primer ejercicio</h2>
+<div id="a" class="section level3">
+<h3>a</h3>
+</div>
+<div id="b" class="section level3">
+<h3>b</h3>
+</div>
+<div id="c" class="section level3">
+<h3>c</h3>
 <p><br></p>
 <p>A continuación, se cargará la base de datos de Comunas Intermedias. Esta base contiene información en orden de: comunas, región de la comuna, la población medida por el CENSO el 2017, nivel al 2011 (la primera medición), nivel al 2020 (última medición), cambio de nivel entre 2011 al 2020, un puntaje calidad de vida urbana aplicada al 2018, el nivel de esa medida, más un puntaje de calidad de vida urbana al 2019. Adicionalmente, se agregan los niveles correspondientes al año 2011, 2018 y 2020 dicotomizados en “Bajo/Promedio” y “Alto”. Por último, se agrega la variable macrozona, que indica la zona que agrupa a la región de la comuna estudiada.</p>
 <p><br></p>
@@ -459,7 +396,7 @@ if(!require(readr)){install.packages(&quot;readr&quot;)}
 if(!require(data.table)){install.packages(&quot;data.table&quot;)}
 if(!require(janitor)){install.packages(&quot;janitor&quot;)}
 
-ICVU2 &lt;- readr::read_csv(&quot;https://docs.google.com/spreadsheets/d/15cqhXobtUSFiFTwH00TWX5LAqD1Yvy54/export?format=csv&amp;gid=1061608575&quot;, skip = 1) %&gt;% janitor::clean_names() %&gt;% 
+ICVU2 &lt;- readr::read_csv(&quot;https://docs.google.com/spreadsheets/d/15cqhXobtUSFiFTwH00TWX5LAqD1Yvy54/export?format=csv&amp;gid=1411116015&quot;, skip = 1) %&gt;% janitor::clean_names() %&gt;% 
   dplyr::mutate(nivel_2018=dplyr::case_when(nivel_2018==&quot;ALTO&quot;~&quot;Alto&quot;,
                                             nivel_2018==&quot;BAJO&quot;~&quot;Bajo&quot;,
                                             nivel_2018==&quot;PROMEDIO&quot;~&quot;Promedio&quot;,T~NA_character_)) %&gt;% 
@@ -488,78 +425,18 @@ ICVU2 &lt;- readr::read_csv(&quot;https://docs.google.com/spreadsheets/d/15cqhXo
                                               &quot;O’Higgins&quot;=&quot;Centro&quot;,
                                               &quot;Tarapacá&quot;=&quot;Norte&quot;,
                                               &quot;Valparaíso&quot;=&quot;Centro&quot;))) </code></pre>
-<pre class="r"><code>invisible(&quot;a&quot;)
-# Formule una pregunta de investigación para el vínculo entre dos variables de naturaleza categórica (a), dos variables de naturaleza continua (b) y una variable de naturaleza categórica binaria y otra continua (c). Luego, para dar respuesta a las preguntas planteadas:&lt;br&gt;&lt;br&gt;
-#   - Escriba una descripción de los datos (por ej., medidas de tendencia central y posición, tabla de contingencia, porcentajes, etc.) en función de la pregunta de investigación &lt;br&gt;
-#   - Genere un gráfico respecto a dicho vínculo&lt;br&gt;
-#   - Haga la prueba de hipótesis que corresponda de acuerdo a los datos, la pregunta y su naturaleza&lt;br&gt;
-#   - Mencione los supuestos de la prueba utilizada y si se cumplen o no. Indique medidas de sensibilidad en caso de incumplimiento y complemente la interpretación de sus hallazgos.
-#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_
-#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_#_
-cat(&quot;Pregunta: ¿Existe asociación entre el cambio en los niveles de Calidad de Vida Urbana que obtuvieron las comunas entre el 2011 y el 2020, y la macrozona a la que pertenece la región de la comuna?&quot;)
-
-cat(&quot;Exploramos los datos&quot;)
-psych::describe(ICVU2[,c(&quot;cambio&quot;,&quot;macrozona&quot;)])
-
-cat(&quot;Recuento de datos por categoría&quot;)
-table(ICVU2$cambio,ICVU2$macrozona)
-
-cat(&quot;Tabla de porcentajes por columna&quot;)
-round(prop.table(table(ICVU2$cambio, ICVU2$macrozona),2)*100,1)
-
-cat(&quot;Gráfico&quot;)
-mosaicplot(cambio~macrozona, data = ICVU2, main= &quot;Gráfico de mosaico&quot;,  ylab=&quot;Macrozona&quot;, xlab=&quot;Cambio nivel ICVU 2011 al 2020&quot;, col= c(&quot;#69b3a2&quot;, &quot;#3C3C3B&quot;, &quot;darkred&quot;))
-
-cat(&quot;Prueba de hipótesis&quot;)
-chi2_2&lt;-
-chisq.test(table(ICVU2$cambio, ICVU2$macrozona))
-chi2
-
-cat(paste0(&quot;No se constata una asociación entre el cambio en el nivel ICVU del 2011 y 2020, y la macrozona chi2(&quot;,as.numeric(chi2_2$parameter),&quot;)=&quot;,round(as.numeric(chi2_2$statistic),2),&quot;, p&quot;,ifelse(as.numeric(chi2_2$p.value)&lt;.001,&quot;&lt;0,001&quot;,ifelse(as.numeric(chi2_2$p.value)&lt;.01,&quot;&lt;0,01&quot;,ifelse(as.numeric(chi2_2$p.value)&lt;.05,&quot;&lt;0,05&quot;,paste0(&quot;=&quot;,round(chi2_2$p.value,2)))))))
-
-cat(&quot;En caso de que el valor esperado sea menor a 5 para algunas de las celdas o intersecciones, se debe utilizar la prueba exacta de Fisher u obtener valores por simulación. Este es el caso.&quot;)</code></pre>
-<pre class="r"><code>invisible(&quot;b&quot;)
-cat(&quot;Pregunta: ¿Existe una relación entre el puntaje del índice de calidad de vida urbana en 2018 y la población medida en 2017&quot;)
-
-#Eliminamos perdidos o NA&#39;s
-ICVU_sel2&lt;-
-na.omit(ICVU2[,c(&quot;icvu_2018&quot;,&quot;poblacion_2017&quot;)])
-
-print(&quot;Exploramos los datos  (con los datos completos)&quot;)
-psych::describe(ICVU_sel2)
-
-cat(&quot;Gráfico  (con los datos completos)&quot;)
-plot(icvu_2018~poblacion_2017, 
-     data = ICVU_sel2, 
-     main= &quot;Diagrama de puntos&quot;,  ylab=&quot;Puntaje de Calidad de Vida Urbana 2018&quot;, xlab=&quot;Población&quot;)
-
-cat(&quot;Prueba de hipótesis (con los datos completos)&quot;)
-cor_icvu2&lt;-
-cor.test(ICVU_sel2$icvu_2018,ICVU_sel2$poblacion_2017)
-cor.test(ICVU_sel2$icvu_2018,ICVU_sel2$poblacion_2017)
-
-cat(paste0(&quot;se constata una relación positiva debil y no significativa entre el puntaje de Calidad de Vida Urbana obtenido el 2018 y la población medida en 2017 r=&quot;,round(as.numeric(cor_icvu2$estimate),2),&quot;,  p&quot;,ifelse(as.numeric(cor_icvu2$p.value)&lt;.001,&quot;&lt;0,001&quot;,ifelse(as.numeric(cor_icvu2$p.value)&lt;.01,&quot;&lt;0,01&quot;,ifelse(as.numeric(cor_icvu2$p.value)&lt;.05,&quot;&lt;0,05&quot;,paste0(&quot;=&quot;,round(cor_icvu2$p.value,2)))))))
-
-cat(&quot;Supuestos y qué haría para remediarlos. Uno de los supuestos es la normalidad multivariada, en que ambas medidas deben tener una distribución normal, debiendo recurrir a una prueba de normalidad; También, que la relación sea lineal y no polinómica (ej., curvas con nódulos en medio o exponencial o logarítmica); varianza constante u homoscedasticidad, lo que se puede medir con un test de filgner; que no existan outliers (o datos anormales; se puede ver con la función scale, viendo aquellos valores mayores a abs(3,29). Si no se cumple la normalidad o la varianza constante, se puede utilizar un test no paramétrico como correlaciones policóricas o una correlación Spearman o kendall-tau&quot;)</code></pre>
-<pre class="r"><code>invisible(&quot;c&quot;)
-
-cat(&quot;¿La población variará en función del Nivel de calidad de vida urbana dicotomizado al 2020&quot;)
-cat(&quot;Describa los datos por grupos&quot;)
-psych::describeBy(ICVU2$poblacion_2017, group= ICVU2$nivel_2020_rec, mat=T)
-
-cat(&quot;Apoyo gráfico&quot;)
-boxplot(ICVU2$poblacion_2017 ~ ICVU2$nivel_2020_rec,
-        col = c(&quot;#69b3a2&quot;, &quot;#878787&quot;),ylab= &quot;Población al 2017&quot;, xlab=&quot;Nivel Dicotomizado&quot;,
-        main=&quot;Gráfico de cajas&quot;)
-
-cat(&quot;Prueba de hipótesis&quot;)
-t.test(poblacion_2017~nivel_2020_rec, ICVU2)
-cat(&quot;Supuestos y qué haría para remediarlos. Se asume una varianza similar en ambos grupos. De tenerlo, debe utilizarse la corrección de Welch para varianzas desiguales. No deben existir muchos outliers y los datos deben distribuirse normalmente. De violarse tales supuestos, se deberá utilizar el test de Wilcoxon que no requiere el supuesto paramétrico de normalidad y al estimar pseudomedianas por el orden de los daos o de acuerdo a su posición, no es tan sensible a outliers&quot;)
-
-# - Hipótesis: la prueba t compara medias, mientras que la Wilcoxon compara el orden de los datos o su posición
-# - Esta última sirve cuando los datos no se distribuyen normalmente o tiene muchos outliers
-# - El test de wilcoxon genera una pseudomediana
-# Cuando las muestras son pequeñas, se recomienda el Wilcoxon, ya que el supuesto paramétrico de normalidad no se cumple</code></pre>
+</div>
+</div>
+<div id="segundo-ejercicio" class="section level2">
+<h2>Segundo ejercicio</h2>
+<div id="a-1" class="section level3">
+<h3>a</h3>
+</div>
+<div id="b-1" class="section level3">
+<h3>b</h3>
+</div>
+<div id="c-1" class="section level3">
+<h3>c</h3>
 <p><br></p>
 <div class="warning" style="padding:0.1em; background-color:#acdce3; color:#12636B">
 <span>
@@ -628,6 +505,8 @@ rubrica %&gt;%  knitr::kable(format=&quot;markdown&quot;)</code></pre>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 </div>
 <div id="fuentes" class="section level1">
 <h1>Fuentes</h1>
